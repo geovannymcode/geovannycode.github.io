@@ -1,0 +1,187 @@
+.legal-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-content {
+  line-height: 1.8;
+}
+
+.legal-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.legal-section:last-of-type {
+  border-bottom: none;
+}
+
+.legal-section h2 {
+  color: #1e3c72;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal-section h3 {
+  color: #2a5298;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-section p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.legal-section a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legal-section a:hover {
+  text-decoration: underline;
+}
+
+/* License Badge */
+.license-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #61dafb;
+}
+
+.license-badge img {
+  width: 88px;
+  height: 31px;
+}
+
+.license-badge p {
+  margin: 0;
+  font-weight: 600;
+  color: #1e3c72;
+}
+
+/* Listas de permisos */
+.permisos-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.permisos-list li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.permitido li {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+}
+
+.condiciones li {
+  background-color: #d1ecf1;
+  border-left: 4px solid #17a2b8;
+}
+
+.prohibido li {
+  background-color: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+.permisos-list strong {
+  color: #1e3c72;
+}
+
+/* Botón de enlace */
+.btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2a5298 0%, #61dafb 100%);
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(97, 218, 251, 0.4);
+}
+
+/* Sección de copyright */
+.copyright {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+}
+
+.copyright h2 {
+  color: #1e3c72;
+}
+
+/* Contacto legal */
+.contacto-legal {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.contact-info {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #61dafb;
+  margin-top: 1rem;
+}
+
+.contact-info strong {
+  color: #2a5298;
+}
+
+/* Última actualización */
+.last-updated {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.last-updated p {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .legal-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .license-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .permisos-list li {
+    font-size: 0.95rem;
+  }
+}

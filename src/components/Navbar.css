@@ -1,0 +1,128 @@
+.navbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+}
+
+.navbar-logo h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-dot {
+  color: #61dafb;
+  font-size: 2rem;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.toggle-icon {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(90deg);
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: block;
+}
+
+.navbar-link:hover {
+  background-color: rgba(97, 218, 251, 0.2);
+  transform: translateY(-2px);
+}
+
+.navbar-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive para tablets y móviles */
+@media (max-width: 968px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-menu.active {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  .navbar-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-link {
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .navbar-link:hover {
+    background-color: rgba(97, 218, 251, 0.15);
+    transform: none;
+  }
+}
