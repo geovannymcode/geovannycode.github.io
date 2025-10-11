@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MarkdownRenderer from '../../components/MarkdownRenderer';
-import './Info.css';
+import './info.css';
 
 const Info = () => {
   const [activeTab, setActiveTab] = useState('personal');
