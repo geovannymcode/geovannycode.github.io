@@ -1,127 +1,164 @@
 # 💻 Stack Tecnológico
 
-## Frontend Development
-
-### Lenguajes y Frameworks
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-**Principales tecnologías:**
-- **React 18** - Biblioteca principal para UI
-- **TypeScript** - Para código más robusto y mantenible
-- **Vite** - Herramienta de build rápida y moderna
-- **React Router** - Enrutamiento declarativo
-- **Redux / Zustand** - State management
-
-### Estilos y UI
-
-- **CSS Modules** - Estilos con scope local
-- **Tailwind CSS** - Framework utility-first
-- **Styled Components** - CSS-in-JS
-- **SASS/SCSS** - Preprocesador CSS
-- **Material-UI / Chakra UI** - Componentes prediseñados
-
 ## Backend Development
 
-### Runtime y Frameworks
+### Lenguajes Principales
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Golang](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 
-**Stack backend:**
-- **Node.js** - Runtime de JavaScript
-- **Express.js** - Framework web minimalista
-- **NestJS** - Framework para aplicaciones empresariales
-- **Socket.io** - Comunicación en tiempo real
-- **JWT** - Autenticación y autorización
+**Especialización:**
+
+- **Java 11+** - Lenguaje principal para sistemas empresariales
+- **Kotlin** - Desarrollo moderno y conciso
+- **Golang** - Sistemas de alto rendimiento
+- **Vaadin** - Framework para aplicaciones web Java
+
+### Frameworks y Tecnologías
+
+**Ecosistema Spring:**
+
+- **Spring Boot** - Desarrollo rápido de microservicios
+- **Spring Cloud** - Arquitectura distribuida
+- **Spring Security** - Autenticación y autorización
+- **Spring Data** - Acceso a datos
+
+**ORM y Persistencia:**
+
+- **Hibernate** - ORM principal
+- **JPA** - Especificación de persistencia
+- **Spring Data JPA** - Repositorios simplificados
+
+---
 
 ## Bases de Datos
 
 ### SQL y NoSQL
 
-| Tipo | Tecnologías | Nivel |
-|------|-------------|-------|
-| SQL | PostgreSQL, MySQL | ⭐⭐⭐⭐ |
-| NoSQL | MongoDB, Redis | ⭐⭐⭐⭐ |
-| Cloud | Firebase, Supabase | ⭐⭐⭐ |
+| Tipo | Tecnologías | Experiencia |
+|------|-------------|-------------|
+| SQL | PostgreSQL, MySQL | ⭐⭐⭐⭐⭐ |
+| NoSQL | MongoDB, Redis | ⭐⭐⭐⭐⭐ |
+| Mensajería | Kafka | ⭐⭐⭐⭐ |
 
 **Experiencia:**
-- Diseño de schemas y modelado de datos
-- Optimización de queries y índices
-- Migraciones y versionado de bases de datos
-- Cacheo con Redis
+
+- Diseño de schemas relacionales complejos
+- Optimización de queries y performance
+- Modelado de datos NoSQL
+- Cache distribuido con Redis
+- Event-driven architecture con Kafka
+
+---
+
+## Arquitectura y Diseño
+
+### Patrones y Principios
+
+```java
+// Arquitectura Hexagonal
+// Clean Architecture
+// Domain-Driven Design (DDD)
+// SOLID Principles
+// Microservices Architecture
+```
+
+**Especialidades:**
+
+- Arquitectura de microservicios
+- Event-driven systems
+- API-first design
+- Arquitectura hexagonal
+- Domain-Driven Design
+
+---
 
 ## DevOps y Herramientas
 
-### Control de Versiones
+### CI/CD y Automatización
 
-```bash
-# Uso diario de Git
-git init
-git add .
-git commit -m "feat: nueva funcionalidad"
-git push origin main
-```
-
-**Git & GitHub:**
-- Control de versiones con Git
-- GitHub Actions para CI/CD
-- Pull Requests y Code Reviews
-- Git Flow y Conventional Commits
-
-### Contenedores y Cloud
-
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-- **Docker** - Containerización de aplicaciones
-- **AWS** - EC2, S3, Lambda, RDS
-- **Vercel** - Deploy de aplicaciones frontend
-- **Netlify** - Hosting y CI/CD
-- **Heroku** - Deploy rápido de apps
+**Stack DevOps:**
 
-## Testing
+- **Jenkins** - CI/CD pipelines
+- **Docker** - Containerización
+- **Git** - Control de versiones
+- **Maven/Gradle** - Build tools
+- **SonarQube** - Code quality
+
+---
+
+## Testing y Calidad
 
 ### Herramientas de Testing
 
-- **Jest** - Testing framework
-- **React Testing Library** - Tests de componentes
-- **Cypress** - E2E testing
-- **Vitest** - Testing con Vite
-
-```javascript
-// Ejemplo de test con Jest
-describe('Calculator', () => {
-  test('suma dos números correctamente', () => {
-    expect(sum(2, 3)).toBe(5);
-  });
-});
+```kotlin
+// JUnit 5 - Unit testing
+// Mockito - Mocking framework
+// TestContainers - Integration testing
+// JMeter - Performance testing
+// Postman - API testing
 ```
+
+**Prácticas:**
+
+- TDD (Test-Driven Development)
+- Integration testing
+- Performance testing
+- Code coverage > 80%
+
+---
 
 ## Herramientas de Desarrollo
 
-### Editores y Productividad
+### IDEs y Productividad
 
-- **VS Code** - Editor principal
-  - Extensions: ESLint, Prettier, GitLens
+- **IntelliJ IDEA** - IDE principal
+  - Plugins: Spring Tools, Lombok, SonarLint
+- **Visual Studio Code** - Editor alternativo
+- **DBeaver** - Gestión de bases de datos
 - **Postman** - Testing de APIs
-- **Figma** - Diseño y prototipado
-- **Notion** - Documentación y organización
-- **Linear** - Gestión de proyectos
+- **Git** - Control de versiones
 
-## En Aprendizaje Activo 🌱
+---
 
-Tecnologías que estoy aprendiendo actualmente:
+## Conocimientos Adicionales
 
-- **Next.js 14** - Framework de React con SSR
-- **GraphQL** - API query language
-- **Kubernetes** - Orquestación de contenedores
-- **Rust** - Lenguaje de sistemas
-- **Web3** - Desarrollo blockchain
+### Otras Tecnologías
+
+**Mensajería y Eventos:**
+
+- Apache Kafka
+- RabbitMQ
+- Redis Pub/Sub
+
+**Monitoreo:**
+
+- Prometheus
+- Grafana
+- ELK Stack (Elasticsearch, Logstash, Kibana)
+
+**Cloud:**
+
+- AWS (EC2, S3, RDS, Lambda)
+- Conocimientos básicos de GCP
+
+---
+
+## En Aprendizaje Continuo 🌱
+
+Tecnologías que estoy explorando:
+
+- **Quarkus** - Framework supersónico
+- **GraalVM** - Native compilation
+- **Kubernetes** - Orquestación avanzada
+- **GraphQL** - APIs modernas
+
+---
 
 ## Metodologías
 
@@ -129,8 +166,10 @@ Tecnologías que estoy aprendiendo actualmente:
 - ✅ TDD (Test-Driven Development)
 - ✅ Clean Code
 - ✅ SOLID Principles
-- ✅ RESTful API Design
+- ✅ Domain-Driven Design
+- ✅ Microservices Architecture
+- ✅ API-First Design
 
 ---
 
-*"Las herramientas no hacen al desarrollador, pero un buen desarrollador sabe elegir las herramientas adecuadas."*
+*"Las herramientas son importantes, pero más importante es entender cuándo y cómo usarlas correctamente."*

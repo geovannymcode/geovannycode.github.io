@@ -19,7 +19,6 @@ const Contacto = () => {
       ...prev,
       [name]: value
     }));
-    // Limpiar error del campo cuando el usuario empieza a escribir
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -64,13 +63,11 @@ const Contacto = () => {
 
     setIsSubmitting(true);
 
-    // Simular envío (aquí conectarías con tu backend o servicio de email)
     setTimeout(() => {
       console.log('Formulario enviado:', formData);
       setSubmitSuccess(true);
       setIsSubmitting(false);
       
-      // Resetear formulario
       setFormData({
         nombre: '',
         email: '',
@@ -78,7 +75,6 @@ const Contacto = () => {
         mensaje: ''
       });
 
-      // Ocultar mensaje de éxito después de 5 segundos
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
@@ -102,7 +98,7 @@ const Contacto = () => {
             <div className="info-icon">📧</div>
             <div>
               <h3>Email</h3>
-              <a href="mailto:contact@geovannycode.com">contact@geovannycode.com</a>
+              <a href="mailto:me@geovannycode.com">me@geovannycode.com</a>
             </div>
           </div>
 
@@ -120,8 +116,8 @@ const Contacto = () => {
             <div className="info-icon">🐙</div>
             <div>
               <h3>GitHub</h3>
-              <a href="https://github.com/geovannycode" target="_blank" rel="noopener noreferrer">
-                github.com/geovannycode
+              <a href="https://github.com/geovannymcode" target="_blank" rel="noopener noreferrer">
+                github.com/geovannymcode
               </a>
             </div>
           </div>
@@ -136,11 +132,33 @@ const Contacto = () => {
             </div>
           </div>
 
+          <div className="info-card">
+            <div className="info-icon">💬</div>
+            <div>
+              <h3>Telegram</h3>
+              <a href="https://t.me/geovannycode" target="_blank" rel="noopener noreferrer">
+                @geovannycode
+              </a>
+            </div>
+          </div>
+
+          <div className="info-card">
+            <div className="info-icon">📸</div>
+            <div>
+              <h3>Instagram</h3>
+              <a href="https://instagram.com/geovannycode" target="_blank" rel="noopener noreferrer">
+                @geovannycode
+              </a>
+            </div>
+          </div>
+
           <div className="disponibilidad">
             <h3>📅 Disponibilidad</h3>
             <p>
-              Actualmente estoy disponible para proyectos freelance y colaboraciones.
-              Tiempo de respuesta típico: 24-48 horas.
+              <strong>País:</strong> Colombia 🇨🇴<br/>
+              <strong>Ciudad:</strong> Barranquilla<br/>
+              <strong>Trabajo:</strong> 100% Remoto<br/>
+              <strong>Tiempo de respuesta:</strong> 24-48 horas
             </p>
           </div>
         </div>

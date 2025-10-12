@@ -2,74 +2,53 @@
 
 ## Educación Superior
 
-### Ingeniería en Sistemas Computacionales
-**Universidad Tecnológica** | 2018 - 2022
-- Especialización en Desarrollo de Software
-- Promedio: 9.2/10
-- Proyecto final: "Plataforma web de gestión empresarial con React y Node.js"
+### Universidad del Norte
 
-## Certificaciones Profesionales
+**Especialista de Ingeniería de Software** | Jul 2015 - Jun 2016
 
-### Frontend Development
+El Ingeniero de Software formula, diseña, construye y gestiona proyectos de software con métodos y herramientas que aportan valor y calidad a la organización.
 
-- **Meta React Professional Certificate** (2023)
-  - Componentes avanzados y Hooks
-  - State Management con Redux
-  - Testing y debugging
+### Universidad Simón Bolívar
 
-- **JavaScript Algorithms and Data Structures** (2022)
-  - freeCodeCamp Certification
-  - 300+ horas de estudio
+**Ingeniería de Sistemas** | Feb 2002 - Dic 2006
 
-### Backend Development
+El Ingeniero de Sistemas soluciona problemas reales con habilidades en tecnología y ciencia, proponiendo soluciones a diversas escalas.
 
-- **Node.js Application Development** (2023)
-  - Linux Foundation
-  - APIs RESTful y microservicios
-  - Seguridad y autenticación
+---
 
-- **MongoDB for Developers** (2022)
-  - MongoDB University
-  - Diseño de bases de datos NoSQL
-  - Optimización de queries
+## Certificaciones y Cursos
 
-### Cloud & DevOps
+### Curso de Kotlin Expert
 
-- **AWS Certified Developer - Associate** (2024)
-  - Amazon Web Services
-  - Servicios cloud y arquitectura serverless
+**Estudiante** | Ene 2022 - May 2022
 
-- **Docker & Kubernetes** (2023)
-  - Udemy Professional Certificate
-  - Containerización y orquestación
+Curso de formación online de Kotlin Expert aprenderás a dominar todas las features del lenguaje.
 
-## Formación Complementaria
+### Curso de Kotlin Android
 
-### Cursos Online Destacados
+**Estudiante** | Dic 2021 - May 2022
 
-| Curso | Plataforma | Año |
-|-------|-----------|-----|
-| Advanced React Patterns | Frontend Masters | 2024 |
-| TypeScript Deep Dive | Udemy | 2023 |
-| System Design Interview | educative.io | 2024 |
-| Web Performance Optimization | Google Developers | 2023 |
+Curso online Kotlin para Desarrolladores Android.
 
-## Educación Continua
+---
 
-Mantengo un compromiso constante con el aprendizaje:
+## Formación Continua
 
-- 📚 Leo regularmente blogs técnicos y documentación oficial
-- 🎥 Consumo contenido educativo en YouTube y cursos online
+Como profesional del desarrollo de software, mantengo un compromiso constante con el aprendizaje:
+
+- 📚 Leo regularmente documentación técnica oficial
+- 🎥 Participo en conferencias y webinars sobre arquitectura de software
 - 💻 Contribuyo a proyectos open source
-- 🏆 Participo en hackathons y desafíos de programación
-- 📝 Escribo artículos técnicos en mi blog
+- 📖 Autor de contenido técnico y libros sobre desarrollo
+- 🏆 Mentor en comunidades de desarrolladores
+
+---
 
 ## Idiomas
 
 - **Español**: Nativo
-- **Inglés**: Avanzado (C1)
-  - Lectura de documentación técnica
-  - Comunicación en equipos internacionales
+- **Inglés**: Básico
+- **Portugués**: Básico
 
 ---
 

@@ -269,3 +269,106 @@
     font-size: 2rem;
   }
 }
+
+
+/* Estilos adicionales para la sección de estadísticas */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Estilos para la sección de experiencia */
+.experience-section {
+  margin: 4rem 0;
+}
+
+.experience-section h2 {
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #61dafb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(97, 218, 251, 0.3);
+}
+
+.experience-card h3 {
+  color: #1e3c72;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-role {
+  color: #61dafb;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.experience-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}

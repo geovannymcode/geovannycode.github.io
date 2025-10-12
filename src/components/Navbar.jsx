@@ -37,11 +37,17 @@ const Navbar = () => {
               👤 Info
             </Link>
           </li>
-          <li className="navbar-item">
+                    <li className="navbar-item">
+            <Link to="/servicios" className="navbar-link" onClick={closeMenu}>
+              🛠️ Servicios
+            </Link>
+          </li>
+           <li className="navbar-item">
             <Link to="/proyectos" className="navbar-link" onClick={closeMenu}>
               💼 Proyectos
             </Link>
           </li>
+
           <li className="navbar-item">
             <Link to="/docencia" className="navbar-link" onClick={closeMenu}>
               📚 Docencia
