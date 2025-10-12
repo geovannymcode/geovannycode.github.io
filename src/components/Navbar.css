@@ -5,6 +5,8 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-container {
@@ -14,6 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar-logo a {
@@ -85,8 +89,11 @@
   transform: translateY(0);
 }
 
-/* Responsive para tablets y móviles */
 @media (max-width: 968px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
   .navbar-toggle {
     display: block;
   }
@@ -104,6 +111,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
   }
 
   .navbar-menu.active {

@@ -1,6 +1,7 @@
 .info-page {
   max-width: 1000px;
   margin: 0 auto;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 .tabs {
@@ -9,6 +10,7 @@
   margin-bottom: 2rem;
   border-bottom: 2px solid #e0e0e0;
   flex-wrap: wrap;
+  overflow-x: auto; /* Permitir scroll en tabs si es necesario */
 }
 
 .tab {
@@ -21,6 +23,7 @@
   color: #666;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap; /* Evitar que el texto se rompa */
 }
 
 .tab:hover {
@@ -35,6 +38,9 @@
 
 .tab-content {
   animation: fadeIn 0.4s ease-in;
+  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+  max-width: 100%; /* No exceder el ancho del contenedor */
+  overflow-x: hidden; /* Prevenir overflow horizontal */
 }
 
 @keyframes fadeIn {
@@ -49,6 +55,10 @@
 }
 
 @media (max-width: 768px) {
+  .info-page {
+    padding: 1rem; /* Reducir padding en móvil */
+  }
+
   .tabs {
     flex-direction: column;
     border-bottom: none;
@@ -58,6 +68,7 @@
     border-left: 3px solid transparent;
     border-bottom: 1px solid #e0e0e0;
     text-align: left;
+    padding: 1rem;
   }
 
   .tab.active {
