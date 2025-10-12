@@ -1,39 +1,49 @@
 # 👋 Sobre Mí
 
-¡Hola! Soy **Geovanny**, un desarrollador web apasionado por crear soluciones tecnológicas innovadoras y eficientes.
+¡Hola! Soy **Geovanny Mendoza**, un Arquitecto y Desarrollador de Software especializado en tecnologías **Java** y **Kotlin**. Con más de **11 años de experiencia**, he trabajado en proyectos que van desde aplicaciones empresariales hasta soluciones fintech de alto impacto.
 
 ## ¿Quién soy?
 
-Soy un desarrollador **Full Stack** con experiencia en tecnologías modernas del ecosistema JavaScript. Me especializo en crear aplicaciones web escalables, mantenibles y con excelente experiencia de usuario.
+Soy un desarrollador **Backend** con fuerte experiencia en arquitectura de microservicios y tecnologías del ecosistema Spring. Me apasiona crear soluciones robustas, escalables y de alto rendimiento.
 
-Mi viaje en el desarrollo web comenzó hace varios años, y desde entonces he trabajado en diversos proyectos que van desde aplicaciones empresariales hasta proyectos personales open source.
+Mi trayectoria incluye trabajo en empresas como **Rappi** donde desarrollé sistemas backend para RappiPay, y también he compartido mi conocimiento como **Docente Catedrático** en la Universidad de Antioquia.
 
 ## Mi enfoque
 
-> "El código limpio no se escribe siguiendo un conjunto de reglas. El profesionalismo y la artesanía provienen de valores que impulsan disciplinas." - Robert C. Martin
+> "El código limpio y la arquitectura sólida son la base de cualquier sistema exitoso"
 
 Creo firmemente en:
 
-- **Código limpio y legible**: Un código bien estructurado es más fácil de mantener
-- **Aprendizaje continuo**: La tecnología evoluciona y nosotros debemos hacerlo también
-- **Compartir conocimiento**: Enseñar es la mejor forma de aprender
-- **Trabajo en equipo**: Los mejores proyectos se construyen colaborativamente
+- **Arquitectura escalable**: Diseño de sistemas que crecen con el negocio
+- **Clean Code**: Código mantenible y fácil de entender
+- **Aprendizaje continuo**: La tecnología evoluciona constantemente
+- **Compartir conocimiento**: Autor del libro "Construir API RESTful con Kotlin"
+- **Trabajo remoto**: 100% de mis proyectos son remotos
 
 ## Lo que hago
 
-- 💻 Desarrollo de aplicaciones web con **React** y **Node.js**
-- 🎨 Diseño de interfaces intuitivas y responsive
-- 📚 Creación de contenido educativo y tutoriales
-- 🤝 Mentoría y enseñanza de programación
-- 🚀 Optimización de rendimiento y mejores prácticas
+- 💻 Desarrollo backend con **Java, Kotlin y Spring Framework**
+- 🏗️ Diseño de arquitecturas de **microservicios**
+- 📚 **Capacitación** y formación en tecnologías backend
+- 📖 Escritor técnico y **autor de libros**
+- 🤝 **Consultoría** independiente para equipos y empresas
+- 🎓 Docencia universitaria
 
-## Valores profesionales
+## Especialidades
 
-1. **Calidad sobre cantidad**: Prefiero hacer las cosas bien que hacerlas rápido
-2. **Comunicación clara**: La buena comunicación es clave en cualquier proyecto
-3. **Adaptabilidad**: Cada proyecto tiene necesidades únicas
-4. **Ética profesional**: Transparencia y honestidad en todo momento
+1. **Backend Development**: APIs REST, microservicios, arquitectura hexagonal
+2. **Ecosistema Spring**: Spring Boot, Spring Cloud, Spring Security
+3. **Bases de datos**: PostgreSQL, MongoDB, Redis
+4. **Mensajería**: Kafka, sistemas event-driven
+5. **CI/CD**: Jenkins, automatización de despliegues
+
+## Mi filosofía de trabajo
+
+- **100% Remoto**: Trabajo de forma remota con equipos alrededor del mundo
+- **Calidad sobre velocidad**: Prefiero hacerlo bien que hacerlo rápido
+- **Mentoría**: Me tomo muy en serio la responsabilidad de enseñar y guiar
+- **Artesanía del Software**: Desarrollo con excelencia técnica y atención al detalle
 
 ---
 
-*"La mejor forma de predecir el futuro es crearlo."*
+*"El mejor código es el que resuelve problemas reales de forma simple y mantenible"*
