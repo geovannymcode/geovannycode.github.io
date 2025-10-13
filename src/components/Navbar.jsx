@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" onClick={closeMenu}>
-            <h2>Geovanny<span className="logo-dot">.</span>Code</h2>
+            <h2>Geovanny<span className="logo-dot"></span>Code</h2>
           </Link>
         </div>
 

@@ -18,6 +18,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
+  background-color: #0f1419;
 }
 
 #root {
@@ -26,13 +27,22 @@ body {
 }
 
 .App {
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  background-color: #f5f7fa;
+  min-height: 100vh;
+  background-color: #0f1419;
   width: 100%;
   overflow-x: hidden;
-  position: relative;
+}
+
+/* Container para el contenido principal (sin sidebar) */
+.app-container {
+  flex: 1;
+  margin-left: 280px; /* Ancho del sidebar */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: calc(100% - 280px);
+  background-color: #0f1419;
 }
 
 .main-content {
@@ -45,10 +55,10 @@ body {
 }
 
 .page {
-  background-color: white;
+  background-color: #1a1f2e;
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s ease-out;
   width: 100%;
   box-sizing: border-box;
@@ -66,7 +76,7 @@ body {
 }
 
 .page h1 {
-  color: #1e3c72;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
   border-bottom: 3px solid #61dafb;
@@ -74,7 +84,7 @@ body {
 }
 
 .page h2 {
-  color: #2a5298;
+  color: #61dafb;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
@@ -82,31 +92,33 @@ body {
 
 .page p {
   line-height: 1.8;
-  color: #555;
+  color: #b0b0b0;
   margin-bottom: 1rem;
 }
 
 .footer {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #1a1f2e 0%, #2a3544 100%);
   color: white;
   text-align: center;
   padding: 2rem;
   margin-top: 4rem;
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer p {
   margin: 0.5rem 0;
+  color: #b0b0b0;
 }
 
 .footer a {
-  color: #61dafb;
+  color: #FFC107;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer a:hover {
-  color: white;
+  color: #FFD54F;
 }
 
 .section {
@@ -121,8 +133,8 @@ body {
 }
 
 .card {
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  background-color: #1a1f2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -130,13 +142,13 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-color: #61dafb;
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.2);
+  border-color: #FFC107;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2a5298 0%, #61dafb 100%);
-  color: white;
+  background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
+  color: #1a1e2e;
   padding: 0.75rem 2rem;
   border: none;
   border-radius: 6px;
@@ -150,10 +162,16 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(97, 218, 251, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 968px) {
+  .app-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .main-content {
     padding: 1rem;
   }
