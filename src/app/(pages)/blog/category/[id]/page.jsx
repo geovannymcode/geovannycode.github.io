@@ -58,7 +58,8 @@ export default BlogCategory;
 
 export async function generateStaticParams() {
     const paths = getAllCategoriesIds()
-    return paths
+     //return paths
+  return paths.map(path => path.params);
 }
 
 async function getSingleCategoryData(params) {

@@ -59,7 +59,8 @@ export default BlogAuthor;
 
 export async function generateStaticParams() {
     const paths = getAllAuthorsIds()
-    return paths
+     //return paths
+  return paths.map(path => path.params);
 }
 
 async function getSingleAuthorData(params) {

@@ -59,7 +59,8 @@ export default BlogTag;
 
 export async function generateStaticParams() {
     const paths = getAllTagsIds()
-    return paths
+     //return paths
+  return paths.map(path => path.params);
 }
 
 async function getSingleTagData(params) {

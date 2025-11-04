@@ -59,7 +59,8 @@ export default BlogArchive;
 
 export async function _generateStaticParams() {
     const paths = getAllArchivesIds()
-    return paths
+    //return paths
+    return paths.map(path => path.params);
 }
 
 async function getSingleArchiveData(params) {
