@@ -1,1 +1,0 @@
-"use strict";exports.id=736,exports.ids=[736],exports.modules={6736:(e,s,r)=>{r.r(s),r.d(s,{default:()=>t});let t=(0,r(8570).createProxy)(String.raw`/Users/geovanny/Documents/Developer/geovanny-web/src/app/_components/ImageFull.jsx#default`)}};

@@ -183,7 +183,7 @@ async function ProjectDetail ( { params } ) {
             <div className="col-lg-12">
 
             {/* call to action */}
-            <div className="art-a art-banner" style={{"backgroundImage": "url(/img/bg.jpg)"}}>
+            <div className="art-a art-banner" style={{"backgroundImage": "url(/img/bg.png)"}}>
                 {/* overlay */}
                 <div className="art-banner-overlay">
                 {/* main title */}

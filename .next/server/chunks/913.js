@@ -1,1 +1,0 @@
-"use strict";exports.id=913,exports.ids=[913],exports.modules={5913:(e,r,s)=>{s.r(r),s.d(r,{default:()=>t});let t=(0,s(8570).createProxy)(String.raw`/Users/geovanny/Documents/Developer/geovanny-web/src/app/_layouts/info-bar/Index.jsx#default`)}};

@@ -1,1 +1,0 @@
-"use strict";exports.id=483,exports.ids=[483],exports.modules={3483:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});let r=(0,t(8570).createProxy)(String.raw`/Users/geovanny/Documents/Developer/geovanny-web/src/app/_components/sliders/LatestPosts.jsx#default`)}};

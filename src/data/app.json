@@ -61,7 +61,7 @@
         "resume": "/files/cv.txt"
     },
     "header": {
-        "topBackground": "/img/bg.jpg",
+        "topBackground": "/img/bg.png",
         "menu": [
             {
                 "label": "Home",
