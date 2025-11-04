@@ -1,0 +1,53 @@
+{
+    "title": "Información de Contacto",
+    "items": [
+        {
+            "info": [
+                {
+                    "label": "País",
+                    "value": "Colombia"
+                },
+                {
+                    "label": "Ciudad",
+                    "value": "Barranquilla"
+                },
+                {
+                    "label": "Dirección",
+                    "value": "Calle 41 # 20 - 120"
+                }
+            ]
+        },
+        {
+            "info": [
+                {
+                    "label": "Email",
+                    "value": "me@geovannycode.com"
+                },
+                {
+                    "label": "X",
+                    "value": "@Geovannycode"
+                },
+                {
+                    "label": "Telegram",
+                    "value": "@Geovannycode"
+                }
+            ]
+        },
+        {
+            "info": [            
+                {
+                    "label": "Instagram",
+                    "value": "@Geovannycode"
+                },
+                {
+                    "label": "Dev",
+                    "value": "@Geovannycode"
+                },
+                {
+                    "label": "GitHub",
+                    "value": "geovannymcode"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "label": "Años de Experiencia",
+            "value": "11",
+            "valueAfter": "+"
+        },
+        {
+            "label": "Líneas de Código",
+            "value": "10000",
+            "valueAfter": "+"
+        },
+        {
+            "label": "Tazas de café",
+            "value": "1000",
+            "valueAfter": "+"
+        },
+        {
+            "label": "Países Visitados",
+            "value": "5",
+            "valueAfter": "+"
+        }
+    ]
+}

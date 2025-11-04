@@ -1,0 +1,45 @@
+{
+  "title": "Mis Servicios",
+  "items": [
+    {
+      "title": "Desarrollo de Microservicios y APIs",
+      "text": "Diseño y desarrollo de microservicios escalables y resilientes usando Kotlin, Spring Boot y NestJS. Implementación de arquitecturas event-driven, comunicación asíncrona con Kafka y Redis, y despliegue en AWS (Lambda, SQS, SNS, API Gateway, Cognito).",
+      "button": {
+        "link": "/contact",
+        "label": "Contáctame"
+      }
+    },
+    {
+      "title": "Arquitectura y Consultoría Técnica",
+      "text": "Asesoría en modernización tecnológica, migraciones a arquitecturas cloud-native y diseño de sistemas basados en principios SOLID, DDD, Hexagonal y CQRS. Evaluación de resiliencia, observabilidad y optimización de costos en infraestructura AWS.",
+      "button": {
+        "link": "/contact",
+        "label": "Contáctame"
+      }
+    },
+    {
+      "title": "Desarrollo Full Stack",
+      "text": "Creación de aplicaciones web completas con Kotlin/Spring Boot en el backend y React o Next.js en el frontend. Integración de APIs seguras con OAuth2/JWT, paneles administrativos y dashboards para automatización y analítica.",
+      "button": {
+        "link": "/contact",
+        "label": "Contáctame"
+      }
+    },
+    {
+      "title": "Capacitación y Mentoría",
+      "text": "Talleres y programas de formación en Java, Kotlin, Spring, arquitectura de software y buenas prácticas de desarrollo. Experiencia docente en la Universidad de Antioquia y mentor del proyecto Misión TIC. Formación adaptada a equipos técnicos y comunidades.",
+      "button": {
+        "link": "/contact",
+        "label": "Contáctame"
+      }
+    },
+    {
+      "title": "Consultoría Independiente 100% Remota",
+      "text": "Ofrezco servicios de consultoría técnica y acompañamiento a empresas y startups en Latinoamérica. Más de 12 años de experiencia ayudando a equipos a escalar sus productos, reducir incidentes y mejorar la calidad del código desde la arquitectura.",
+      "button": {
+        "link": "/contact",
+        "label": "Contáctame"
+      }
+    }
+  ]
+}

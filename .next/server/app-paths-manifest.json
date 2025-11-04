@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(pages)/blog/[id]/page": "app/(pages)/blog/[id]/page.js",
+  "/(pages)/blog/author/[id]/page": "app/(pages)/blog/author/[id]/page.js",
+  "/(pages)/blog/archive/[id]/page": "app/(pages)/blog/archive/[id]/page.js",
+  "/(pages)/blog/category/[id]/page": "app/(pages)/blog/category/[id]/page.js",
+  "/(pages)/blog/tag/[id]/page": "app/(pages)/blog/tag/[id]/page.js",
+  "/(pages)/blog-2/page": "app/(pages)/blog-2/page.js",
+  "/(pages)/blog/page": "app/(pages)/blog/page.js",
+  "/(pages)/history/page": "app/(pages)/history/page.js",
+  "/(pages)/contact/page": "app/(pages)/contact/page.js",
+  "/(pages)/page": "app/(pages)/page.js",
+  "/(pages)/onepage/page": "app/(pages)/onepage/page.js",
+  "/(pages)/projects/page": "app/(pages)/projects/page.js",
+  "/(pages)/projects-3/page": "app/(pages)/projects-3/page.js",
+  "/(pages)/blog/page/[page]/page": "app/(pages)/blog/page/[page]/page.js",
+  "/(pages)/projects/[id]/page": "app/(pages)/projects/[id]/page.js",
+  "/(pages)/projects-4/page": "app/(pages)/projects-4/page.js",
+  "/(pages)/projects-2/page": "app/(pages)/projects-2/page.js"
+}

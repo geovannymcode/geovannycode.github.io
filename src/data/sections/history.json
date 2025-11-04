@@ -1,0 +1,74 @@
+{
+    "col1": {
+        "title": "Educación",
+            "items": [
+      {
+        "title": "Universidad del Norte",
+        "subtitle": "Especialista de Ingeniería de Software",
+        "date": "Jul 2015 – Jun 2016",
+        "text": "Formulación, diseño y gestión de proyectos de software con métodos y herramientas que aportan valor y calidad a la organización.",
+        "button": {
+          "link": "/files/diploma-uninorte.pdf",
+          "type": "link",
+          "label": "Diploma"
+        }
+      },
+            {
+        "title": "Universidad Simón Bolívar",
+        "subtitle": "Ingeniería de Sistemas",
+        "date": "Feb 2002 – Dic 2006",
+        "text": "Solución de problemas reales con habilidades en tecnología y ciencia, proponiendo soluciones a diversas escalas.",
+        "button": {
+          "link": "/files/diploma-usb.pdf",
+          "type": "link",
+          "label": "Diploma"
+        }
+      },
+      {
+        "title": "Certified Vaadin 24 Developer",
+        "subtitle": "Vaadin",
+        "date": "Jul 2024",
+        "text": "Certificación oficial que valida conocimientos avanzados en Vaadin Framework y herramientas para desarrollo de aplicaciones web modernas.",
+        "button": {
+          "link": "https://vaadin.com/learn/certificate/f5adfe8c-edd4-4688-9601-443dcf879c4f",
+          "type": "link",
+          "label": "Mostrar Credencial"
+        }
+      },
+      {
+        "title": "Go In One Evening",
+        "subtitle": "Three Dots Labs",
+        "date": "Ene 2024",
+        "text": "Entrenamiento intensivo sobre fundamentos del lenguaje Go, finalizado con un proyecto práctico de integración y concurrencia.",
+        "button": {
+          "link": "https://threedots.tech/cert/UvKZPMFC",
+          "type": "link",
+          "label": "Mostrar Credencial"
+        }
+      }
+        ]
+    },
+    "col2": {
+        "title": "Experiencia",
+        "items": [
+      {
+        "title": "RappiPay Colombia",
+        "subtitle": "Senior Backend Developer",
+        "date": "Nov 2022 – Sept 2025",
+        "text": "Diseño y mantenimiento de microservicios event-driven para pagos, tarjetas y préstamos con Kotlin, Spring Boot y PostgreSQL. Comunicación asíncrona con Kafka y Redis, soluciones serverless en AWS (Lambda, SQS, SNS, API Gateway, Cognito) y trazabilidad end-to-end con Mezmo y CloudWatch. Liderazgo en integraciones entre equipos de Colombia y Brasil."
+      },
+      {
+        "title": "Consultor Independiente / Freelancer",
+        "subtitle": "Especialista en Arquitecturas Backend",
+        "date": "Feb 2019 – Nov 2022",
+        "text": "Consultorías backend y modernización tecnológica para clientes del sector financiero, telecomunicaciones y retail en LATAM. Migraciones a arquitecturas modernas con Java EE 11, Kotlin y Golang. Diseño de sistemas resilientes aplicando principios SOLID y patrones asincrónicos. Clientes: Metlife, Monex, Royal Holiday, TUL, Neivor, Banistmo, Tigo Guatemala, Qiip (S4N), Bancolombia."
+      },
+      {
+        "title": "Universidad de Antioquia",
+        "subtitle": "Docente Catedrático y Mentor Proyecto Misión TIC",
+        "date": "May 2022 – Nov 2022",
+        "text": "Impartición de cursos de Técnica de Programación y Laboratorio G1, mentoría de proyectos del programa Misión TIC 2022. Formación de estudiantes en Java, Spring Boot, pruebas unitarias (JUnit), Git, Docker y despliegues cloud-native."
+      }
+        ]
+    }
+}

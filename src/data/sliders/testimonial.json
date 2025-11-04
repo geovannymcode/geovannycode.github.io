@@ -1,0 +1,33 @@
+{
+  "title": "Recomendaciones",
+  "items": [
+    {
+      "name": "Silvia Carolina Moreno Trillos",
+      "image": "/img/testimonials/silvia.jpeg",
+      "role": "PhD. Ingeniería de Sistemas y Computación",
+      "text": "Geovanny es uno de los mejores programadores que conozco, experto especialmente en el lenguaje Java. Además es una excelente persona y tiene una forma de explicar muy didáctica y fácil de entender.",
+      "rating": 5
+    },
+    {
+      "name": "Arístides Villarreal Bravo",
+      "image": "/img/testimonials/aristides.png",
+      "role": "Java Champions",
+      "text": "Geovanny es un destacado contribuyente en la comunidad de desarrolladores Java y Kotlin, compartiendo sus profundos conocimientos. He colaborado con él en diversos proyectos y coescrito un libro con Otavio Santana, donde Geovanny aportó capítulos excepcionales sobre Vaadin. Posee grandes cualidades profesionales y personales.",
+      "rating": 5
+    },
+    {
+      "name": "Betzabe Salas",
+      "image": "/img/testimonials/betzabe.jpeg",
+      "role": "Esp. Ingeniería de Software",
+      "text": "Geo es un experto destacado en Java y Kotlin, reconocido por su habilidad para liderar equipos y comunidades de desarrolladores con eficacia. Su rol al frente de la comunidad Java Jug Barranquilla demuestra su compromiso y capacidad para motivar a otros. Más allá de su expertise técnico, Geo sobresale en la enseñanza y la transmisión de conocimientos, enriqueciendo a cada equipo o proyecto con su participación.",
+      "rating": 5
+    },
+    {
+      "name": "Ricardo Cantillo",
+      "image": "/img/testimonials/ricardo.jpg",
+      "role": "Java EE, Vaadin, Spring Boot, Expositor & Docente",
+      "text": "Geovanny, líder del Grupo de Usuarios de Java en Barranquilla, es un apasionado desarrollador y speaker. Su compromiso con la comunidad se refleja en su dedicación para enseñar sobre la tecnología de Java. ¡Un referente inspirador en el campo!",
+      "rating": 5
+    }
+  ]
+}

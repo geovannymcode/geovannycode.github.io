@@ -1,0 +1,1 @@
+"use strict";exports.id=146,exports.ids=[146],exports.modules={4146:(e,s,r)=>{r.r(s),r.d(s,{default:()=>t});let t=(0,r(8570).createProxy)(String.raw`/Users/geovanny/Documents/Developer/geovanny-web/src/app/_components/sliders/Testimonial.jsx#default`)}};

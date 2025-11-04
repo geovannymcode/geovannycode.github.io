@@ -1,0 +1,22 @@
+{
+    "bg_image": "/img/bg.jpg",
+    "title": "Bienvenido a Mi<br/>Espacio Artístico</br>en la web",
+    "subtitle": {
+  "start": "&lt;<i>code</i>&gt; ",
+  "rotates": [
+    "Microservicios y APIs (Kotlin/Spring Boot, NestJS).",
+    "Frontend con React y Next.js.",
+    "Arquitectura limpia: Hexagonal, DDD y pruebas.",
+    "DevOps en AWS: Docker, CI/CD y observabilidad."
+  ],
+  "end": "&lt;/<i>code</i>&gt;"
+},
+    "button": {
+        "link": "/projects",
+        "label": "Explora Ahora"
+    },
+    "photo": {
+        "url": "img/face-2.png",
+        "alt": "Geovanny Mendoza"
+    }
+}
