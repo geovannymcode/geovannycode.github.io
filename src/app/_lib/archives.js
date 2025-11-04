@@ -103,7 +103,7 @@ export function getAllArchivesIds() {
       }
     });
     
-    archives.map((item) => {
+    return archives.map((item) => {
         return {
             params: {
               id: item.id

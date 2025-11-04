@@ -235,7 +235,8 @@ export default ProjectDetail;
 export async function generateStaticParams() {
   const paths = getAllProjectsIds()
 
-  return paths
+  //return paths
+  return paths.map(path => path.params);
 }
 
 async function getSingleProjectData(params) {
