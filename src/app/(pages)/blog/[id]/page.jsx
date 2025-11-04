@@ -190,7 +190,8 @@ export default PostsDetail;
 export async function generateStaticParams() {
   const paths = getAllPostsIds()
 
-  return paths
+  //return paths
+  return paths.map(path => path.params);
 }
 
 async function getSinglePostData(params) {
