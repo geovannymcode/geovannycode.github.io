@@ -85,8 +85,14 @@ async function BlogPage( { params } ) {
 };
 export default BlogPage;
 
+//export async function generateStaticParams() {
+//  return Array.from({ length: 5 }).map((_, i) => `/blog/page/${i + 2}`)
+//}
+
 export async function generateStaticParams() {
-  return Array.from({ length: 5 }).map((_, i) => `/blog/page/${i + 2}`)
+  return Array.from({ length: 5 }).map((_, i) => ({
+    page: (i + 2).toString()
+  }))
 }
 
 async function getAllPosts( params ) {
