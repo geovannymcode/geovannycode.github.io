@@ -1,4 +1,4 @@
 ---
 #preview
-title: Architecture
+title: Arquitectura & Buenas Prácticas
 ---

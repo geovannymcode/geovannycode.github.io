@@ -41,4 +41,5 @@ Thumbs.db
 # Deploy
 deploy.sh
 
-.next/
+.next
+out

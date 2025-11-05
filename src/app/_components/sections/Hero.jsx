@@ -2,11 +2,13 @@
 
 import Data from "@data/sections/hero.json";
 import Link from "next/link";
-
-
 import { ReactTyped } from "react-typed";
 
 const HeroOne = () => {
+    // Función para asegurar que la ruta comience con '/'
+    const ensureAbsolutePath = (path) => {
+        return path.startsWith('/') ? path : `/${path}`;
+    };
 
     return (
         <>
@@ -19,7 +21,9 @@ const HeroOne = () => {
                     <div className="col-lg-12">
 
                     {/* banner */}
-                    <div className="art-a art-banner" style={{"backgroundImage": "url("+Data.bg_image+")"}}>
+                    <div className="art-a art-banner" style={{
+                        "backgroundImage": `url(${ensureAbsolutePath(Data.bg_image)})`
+                    }}>
                         {/* banner back */}
                         <div className="art-banner-back"></div>
                         {/* banner dec */}
@@ -53,7 +57,11 @@ const HeroOne = () => {
                         </div>
                         {/* main title end */}
                         {/* photo */}
-                        <img src={Data.photo.url} className="art-banner-photo" alt={Data.photo.alt} />
+                        <img 
+                            src={ensureAbsolutePath(Data.photo.url)} 
+                            className="art-banner-photo" 
+                            alt={Data.photo.alt} 
+                        />
                         </div>
                         {/* banner overlay end */}
                     </div>
