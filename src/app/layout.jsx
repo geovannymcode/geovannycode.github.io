@@ -1,4 +1,5 @@
 import { Poppins, Courier_Prime } from 'next/font/google'
+import 'highlight.js/styles/vs2015.css';
 
 const primary_font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
