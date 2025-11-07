@@ -352,7 +352,7 @@ export async function getPostData(id) {
       .use(remarkGfm)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
-      .use(rehypeHighlight, { ignoreMissing: true })
+     .use(rehypeHighlight, { ignoreMissing: true, detect: false })
       .use(rehypeStringify, { allowDangerousHtml: true })
       .process(matterResult.content);
 
