@@ -1524,34 +1524,27 @@ content (after 500px)
   object-position: center !important; /* o 'top center' si prefieres priorizar la parte superior */
 }
 
-
-/* ===== Code blocks visibles en tema oscuro ===== */
+/* === Code blocks (respetar colores del tema hljs) === */
 .art-text pre {
-  background: #1f2128;        /* fondo oscuro pero más claro que el body */
-  color: #eaeaea;             /* texto legible */
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: auto;
-  line-height: 1.5;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+  line-height: 1.6;
   margin: 20px 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 
-.art-text pre code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  font-size: 13px;
-  display: block;             /* evita que el código herede estilos inline raros */
-  color: inherit;             /* usa el color del pre */
-  background: transparent;
-  padding: 0;
+.art-text pre code.hljs {
+  display: block;   /* que ocupe todo el ancho del pre */
+  background: unset;/* deja que .hljs (del tema) maneje el fondo */
 }
 
-/* código inline `así` */
+/* Código inline `así` (esto sí es tuyo) */
 .art-text p code,
 .art-text li code {
   background: rgba(255,255,255,0.06);
-  color: #f5f5f5;
   padding: 2px 6px;
   border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+  font-size: 0.95em;
 }

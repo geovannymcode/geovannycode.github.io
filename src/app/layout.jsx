@@ -1,5 +1,8 @@
 import { Poppins, Courier_Prime } from 'next/font/google'
-import 'highlight.js/styles/github-dark.css';
+//import 'highlight.js/styles/vs2015.css';
+import 'highlight.js/styles/github-dark-dimmed.css';
+// /import 'highlight.js/styles/atom-one-dark.css';
+// import 'highlight.js/styles/github-dark.css';
 
 const primary_font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],

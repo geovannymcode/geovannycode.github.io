@@ -8,6 +8,17 @@ import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 
+// Lenguajes que vas a resaltar
+import java from "highlight.js/lib/languages/java";
+import kotlin from "highlight.js/lib/languages/kotlin";
+import bash from "highlight.js/lib/languages/bash";
+import javascript from "highlight.js/lib/languages/javascript";
+import typescript from "highlight.js/lib/languages/typescript";
+import json from "highlight.js/lib/languages/json";
+import xml from "highlight.js/lib/languages/xml";
+import yaml from "highlight.js/lib/languages/yaml";
+import sql from "highlight.js/lib/languages/sql";
+
 const postsDirectory = path.join(process.cwd(), "src/data/posts");
 const jsonDir = "src/data/.json";
 
@@ -352,7 +363,21 @@ export async function getPostData(id) {
       .use(remarkGfm)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
-     .use(rehypeHighlight, { ignoreMissing: true, detect: false })
+      .use(rehypeHighlight, {
+        ignoreMissing: true,
+        detect: false, // confía en el lenguaje del fence
+        languages: {
+          java,
+          kotlin,
+          bash,
+          javascript,
+          typescript,
+          json,
+          xml,
+          yaml,
+          sql,
+        },
+      })
       .use(rehypeStringify, { allowDangerousHtml: true })
       .process(matterResult.content);
 
