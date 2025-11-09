@@ -9,7 +9,7 @@ tags:
     - Java
     - Spring Boot
 author: Geovanny Mendoza
-short: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi commodi dignissimos.
+short: Exploramos cómo las últimas versiones de Spring Boot y Spring Framework están transformando el desarrollo Java moderno con un enfoque más modular, eficiente y preparado para la nube.
 ---
 
 > *"La evolución del software no ocurre de manera abrupta, sino como una serie de refinamientos deliberados que nos llevan a escribir código más expresivo, predecible y mantenible."*
@@ -616,8 +616,8 @@ Comienza tu journey con proyectos piloto, mide los beneficios cuantitativamente,
 
 ## Referencias y Recursos
 
-- [Spring Boot 4.0 Reference Documentation](https://docs.spring.io/spring-boot/docs/4.0.0/reference/html/)
-- [Spring Framework 7.0 Reference Documentation](https://docs.spring.io/spring-framework/docs/7.0.0/reference/html/)
+- [Spring Boot 4.0 Reference Documentation](https://docs.spring.io/spring-boot/4.0/index.html)
+- [Spring Framework 7.0 Reference Documentation](https://docs.spring.io/spring-framework/reference/7.0/index.html)
 - [Spring Framework 7.0 Release Notes](https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes)
 - [Spring Boot 4.0 Release Notes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Release-Notes)
 - [GraalVM Native Image Documentation](https://www.graalvm.org/latest/reference-manual/native-image/)

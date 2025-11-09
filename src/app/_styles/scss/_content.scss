@@ -1526,6 +1526,8 @@ content (after 500px)
 
 /* === Code blocks (respetar colores del tema hljs) === */
 .art-text pre {
+  position: relative;          /* para el botón copiar */
+  padding: 16px 44px 16px 16px;/* espacio a la derecha */
   padding: 16px;
   border-radius: 10px;
   overflow: auto;
@@ -1547,4 +1549,40 @@ content (after 500px)
   border-radius: 4px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
   font-size: 0.95em;
+}
+
+/* botón copiar: icon-only */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: #eaeaea;
+  cursor: pointer;
+  transition: transform .08s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
+  backdrop-filter: blur(4px);
+  opacity: .9;
+  z-index: 2;
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.22);
+  opacity: 1;
+}
+
+.copy-btn:active { transform: scale(0.98); }
+
+/* pequeño highlight al copiar */
+.copy-btn.copied {
+  background: rgba(76, 175, 80, 0.22); /* verdoso */
+  border-color: rgba(76, 175, 80, 0.35);
 }

@@ -3,6 +3,7 @@ import { Poppins, Courier_Prime } from 'next/font/google'
 import 'highlight.js/styles/github-dark-dimmed.css';
 // /import 'highlight.js/styles/atom-one-dark.css';
 // import 'highlight.js/styles/github-dark.css';
+import CodeCopyEnhancer from './_components/CodeCopyEnhancer';
 
 const primary_font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -53,6 +54,7 @@ const Layouts = ({
         {/* app */}
         <div className="art-app">
           {children}
+          <CodeCopyEnhancer />
         </div>
         {/* app end */}
       </body>

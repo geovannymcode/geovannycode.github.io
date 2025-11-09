@@ -18,6 +18,7 @@ import json from "highlight.js/lib/languages/json";
 import xml from "highlight.js/lib/languages/xml";
 import yaml from "highlight.js/lib/languages/yaml";
 import sql from "highlight.js/lib/languages/sql";
+import { visit } from "unist-util-visit";
 
 const postsDirectory = path.join(process.cwd(), "src/data/posts");
 const jsonDir = "src/data/.json";
@@ -378,6 +379,7 @@ export async function getPostData(id) {
           sql,
         },
       })
+        .use(rehypeJavaAnnotationAttrs) 
       .use(rehypeStringify, { allowDangerousHtml: true })
       .process(matterResult.content);
 
@@ -437,4 +439,34 @@ export async function generateJsonPostsData() {
   } catch (err) {
     console.error(err);
   }
+}
+
+// Plugin: resalta claves y strings dentro de anotaciones Java
+function rehypeJavaAnnotationAttrs() {
+  return (tree) => {
+    visit(tree, "element", (node) => {
+      const cls = node.properties?.className || [];
+      if (node.tagName === "code" && cls.includes("language-java")) {
+        if (node.children?.length === 1 && node.children[0].type === "text") {
+          let txt = node.children[0].value;
+
+          // Solo dentro de @Anotacion(...): envolvemos clave= y "string"
+          txt = txt.replace(
+            /(@[\w.]+)\s*\(([\s\S]*?)\)/g,
+            (full, atName, inside) => {
+              const withAttrs = inside
+                // clave =
+                .replace(/\b([a-zA-Z_]\w*)\s*=/g, '<span class="hljs-attr">$1</span>=')
+                // "string"
+                .replace(/"([^"]*)"/g, '<span class="hljs-string">"$1"</span>');
+              return `${atName}(${withAttrs})`;
+            }
+          );
+
+          // volvemos el nodo en HTML crudo para conservar los spans
+          node.children = [{ type: "raw", value: txt }];
+        }
+      }
+    });
+  };
 }

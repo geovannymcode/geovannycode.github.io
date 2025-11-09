@@ -1,179 +1,156 @@
 {
-    "settings": {
-        "siteName": "GeovannyCode",
-        "siteDescription": "Personal Portfolio React Next.JS Template",
-        "formspreeURL": "https://formspree.io/f/your_api_key",
-        "mailchimp": {
-            "url": "",
-            "key": ""
-        },
-        "perPage": 6
+  "settings": {
+    "siteName": "GeovannyCode",
+    "siteDescription": "Personal Portfolio React Next.JS Template",
+    "formspreeURL": "https://formspree.io/f/your_api_key",
+    "mailchimp": {
+      "url": "",
+      "key": ""
     },
-    "profile": {
-        "avatar": "/img/Foto_Geovanny.png",
-        "name": "Geovanny Mendoza",
-        "role": "Freelance Architect & Developer <br>🍃 Java · Spring · Kotlin",
-        "info": [
-            {
-                "label": "Residencia",
-                "value": "Colombia"
-            },
-            {
-                "label": "Ciudad",
-                "value": "Barranquilla"
-            }
-        ],
-        "skills": {
-            "language": [
-                {
-                    "label": "Español",
-                    "value": "1"
-                },
-                {
-                    "label": "English",
-                    "value": "0.9"
-                },
-                {
-                    "label": "Portugués",
-                    "value": "0.7"
-                }
-            ],
-               "hard": [
-  { "label": "Java / Kotlin", "value": "0.97" },
-  { "label": "Spring Boot / Spring Cloud", "value": "0.95" },
-  { "label": "AWS (Lambda, SQS, SNS, API Gateway, Cognito)", "value": "0.88" },
-  { "label": "Kafka / Redis", "value": "0.85" },
-  { "label": "PostgreSQL / DynamoDB", "value": "0.85" },
-  { "label": "React / Next.js / NestJS", "value": "0.80" },
-  { "label": "Golang / Vaadin", "value": "0.75" },
-  { "label": "Docker / CI-CD (Jenkins, ArgoCD, GitLab CI)", "value": "0.88" }
-],
-"knowledge": [
-  { "label": "Arquitectura: Hexagonal, Clean, DDD, CQRS, EDA" },
-  { "label": "Patrones: Saga, Outbox, Circuit Breaker, Retry, Idempotencia" },
-  { "label": "Observabilidad: Mezmo, ELK, Prometheus, Grafana, OpenTelemetry" },
-  { "label": "Seguridad y Autenticación: OAuth2, JWT" },
-  { "label": "Integraciones: REST, GraphQL" },
-  { "label": "Gestión de Datos: JPA/Hibernate, Flyway" },
-  { "label": "Infraestructura: Elastic Beanstalk, Contenerización y CI/CD" }
-]
-        },
-        "resume": "/files/cv.txt"
-    },
-    "header": {
-        "topBackground": "/img/bg.png",
-        "menu": [
-            {
-                "label": "Home",
-                "link": "/",
-                "children": 0
-            },
-            {
-                "label": "History",
-                "link": "/history",
-                "children": 0
-            },
-            {
-                "label": "Projects",
-                "link": "/projects",
-                "children": [
-                    {
-                        "label": "Projects Masonry",
-                        "link": "/projects"
-                    },
-                    {
-                        "label": "Projects Grid",
-                        "link": "/projects-2"
-                    },
-                    {
-                        "label": "Projects Masonry 2",
-                        "link": "/projects-3"
-                    },
-                    {
-                        "label": "Projects Grid 2",
-                        "link": "/projects-4"
-                    }
-                ]
-            },
-            {
-                "label": "Blog",
-                "link": "/blog",
-                "children": [
-                    {
-                        "label": "Blog List",
-                        "link": "/blog"
-                    },
-                    {
-                        "label": "Blog List 2",
-                        "link": "/blog-2"
-                    },
-                    {
-                        "label": "Publication",
-                        "link": "/blog/the-infrastructure-that-powers-the-world"
-                    }
-                ]
-            },
-            {
-                "label": "Contact",
-                "link": "/contact",
-                "children": 0
-            },
-            {
-                "label": "Other",
-                "link": "/#.",
-                "children": [
-                    {
-                        "label": "Onepage",
-                        "link": "/onepage"
-                    }
-                ]
-            }
-        ]
-    },
-    "footer": {
-        "copy": "© 2025 Arter. All rights reserved.",
-        "developer": "Developed by:&#160; <a href='https://themeforest.net/user/bslthemes' target='_blank'>bslthemes</a>"
-    },
-    "social": [
-        {
-            "link": "https://www.linkedin.com/in/geovannycode/",
-            "icon": "fab fa-linkedin-in",
-            "title": "Linkedin"
-        },
-        {
-            "link": "https://www.instagram.com/geovannycode/",
-            "icon": "fab fa-instagram",
-            "title": "Instagram"
-        },
-        {
-            "link": "https://github.com/geovannymcode",
-            "icon": "fab fa-github",
-            "title": "Github"
-        },
-        {
-            "link": "https://x.com/geovannycode",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
-        }
+    "perPage": 6
+  },
+  "profile": {
+    "avatar": "/img/Foto_Geovanny.png",
+    "name": "Geovanny Mendoza",
+    "role": "Freelance Architect & Developer <br>🍃 Java · Spring · Kotlin",
+    "info": [
+      {
+        "label": "Residencia",
+        "value": "Colombia"
+      },
+      {
+        "label": "Ciudad",
+        "value": "Barranquilla"
+      }
     ],
-    "projects": {
-        "categories": [
-            {
-                "name": "Web Templates",
-                "slug": "web-templates"
-            },
-            {
-                "name": "UI Elements",
-                "slug": "ui-elements"
-            },
-            {
-                "name": "Logos",
-                "slug": "logos"
-            },
-            {
-                "name": "Drawings",
-                "slug": "drawings"
-            }
-        ]
+    "skills": {
+      "language": [
+        {
+          "label": "Español",
+          "value": "1"
+        },
+        {
+          "label": "English",
+          "value": "0.9"
+        },
+        {
+          "label": "Portugués",
+          "value": "0.7"
+        }
+      ],
+      "hard": [
+        { "label": "Java / Kotlin", "value": "0.97" },
+        { "label": "Spring Boot / Spring Cloud", "value": "0.95" },
+        {
+          "label": "AWS (Lambda, SQS, SNS, API Gateway, Cognito)",
+          "value": "0.88"
+        },
+        { "label": "Kafka / Redis", "value": "0.85" },
+        { "label": "PostgreSQL / DynamoDB", "value": "0.85" },
+        { "label": "React / Next.js / NestJS", "value": "0.80" },
+        { "label": "Golang / Vaadin", "value": "0.75" },
+        {
+          "label": "Docker / CI-CD (Jenkins, ArgoCD, GitLab CI)",
+          "value": "0.88"
+        }
+      ],
+      "knowledge": [
+        { "label": "Arquitectura: Hexagonal, Clean, DDD, CQRS, EDA" },
+        {
+          "label": "Patrones: Saga, Outbox, Circuit Breaker, Retry, Idempotencia"
+        },
+        {
+          "label": "Observabilidad: Mezmo, ELK, Prometheus, Grafana, OpenTelemetry"
+        },
+        { "label": "Seguridad y Autenticación: OAuth2, JWT" },
+        { "label": "Integraciones: REST, GraphQL" },
+        { "label": "Gestión de Datos: JPA/Hibernate, Flyway" },
+        {
+          "label": "Infraestructura: Elastic Beanstalk, Contenerización y CI/CD"
+        }
+      ]
+    },
+    "resume": "/files/cv.txt"
+  },
+  "header": {
+    "topBackground": "/img/bg.png",
+    "menu": [
+      {
+        "label": "Home",
+        "link": "/",
+        "children": 0
+      },
+      {
+        "label": "History",
+        "link": "/history",
+        "children": 0
+      },
+      {
+        "label": "Projects",
+        "link": "/projects",
+        "children": []
+      },
+      {
+        "label": "Blog",
+        "link": "/blog",
+        "children": []
+      },
+      {
+        "label": "Contact",
+        "link": "/contact",
+        "children": 0
+      },
+      {
+        "label": "Other",
+        "link": "/onepage",
+        "children": []
+      }
+    ]
+  },
+  "footer": {
+    "copy": "© 2025 Arter. All rights reserved.",
+    "developer": "Developed by:&#160; <a href='https://themeforest.net/user/bslthemes' target='_blank'>bslthemes</a>"
+  },
+  "social": [
+    {
+      "link": "https://www.linkedin.com/in/geovannycode/",
+      "icon": "fab fa-linkedin-in",
+      "title": "Linkedin"
+    },
+    {
+      "link": "https://www.instagram.com/geovannycode/",
+      "icon": "fab fa-instagram",
+      "title": "Instagram"
+    },
+    {
+      "link": "https://github.com/geovannymcode",
+      "icon": "fab fa-github",
+      "title": "Github"
+    },
+    {
+      "link": "https://x.com/geovannycode",
+      "icon": "fab fa-twitter",
+      "title": "Twitter"
     }
+  ],
+  "projects": {
+    "categories": [
+      {
+        "name": "Web Templates",
+        "slug": "web-templates"
+      },
+      {
+        "name": "UI Elements",
+        "slug": "ui-elements"
+      },
+      {
+        "name": "Logos",
+        "slug": "logos"
+      },
+      {
+        "name": "Drawings",
+        "slug": "drawings"
+      }
+    ]
+  }
 }
