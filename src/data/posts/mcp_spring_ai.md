@@ -90,7 +90,7 @@ spring:
         streamable-http:
           connections:
             companyData:
-              url: https://mcp.example-company.com/mcp
+              url: https://mcp.example-geovannycode.com/mcp
             marketData:
               url: https://market-data-mcp.example.com/mcp
 ```
