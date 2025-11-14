@@ -170,7 +170,7 @@ public class ChatController {
 
 Este controlador configura un `ChatClient` con todas las herramientas disponibles del proveedor de callbacks de herramientas, y expone un endpoint `/chat` que acepta un mensaje y devuelve la respuesta del LLM aumentada con las capacidades de los servidores MCP.
 
-## Casos de Uso del Mundo Real
+## Implementaciones Posibles en Entornos Reales
 
 ### Caso 1: Sistema Financiero con Datos de Mercado en Tiempo Real
 
