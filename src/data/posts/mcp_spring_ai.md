@@ -12,7 +12,7 @@ author: Geovanny Mendoza
 short: Exploramos cómo las últimas versiones de Spring Boot y Spring Framework están transformando el desarrollo Java moderno con un enfoque más modular, eficiente y preparado para la nube.
 ---
 
-# Potenciando la IA con Spring AI y MCP
+# Spring AI + MCP: Fundamentos y Aplicaciones Prácticas para Desarrolladores
 
 ## Introducción: El Protocolo de Contexto de Modelo (MCP)
 
@@ -180,7 +180,7 @@ Imaginemos un banco que quiere proporcionar análisis financiero personalizado a
 2. Un servidor MCP con el historial financiero del cliente
 3. Un servidor MCP con recomendaciones de productos financieros
 
-Cuando un cliente pregunta: "¿Debería invertir en acciones tecnológicas considerando mi cartera actual?", el LLM puede:
+Cuando un cliente pregunta: **¿Debería invertir en acciones tecnológicas considerando mi cartera actual?**, el LLM puede:
 
 - Obtener los datos de mercado más recientes
 - Analizar la cartera actual del cliente
@@ -197,7 +197,7 @@ Una empresa tecnológica podría implementar un asistente de soporte técnico qu
 2. Consulta el estado actual de los sistemas a través de otro servidor MCP
 3. Puede abrir tickets de soporte mediante un tercer servidor MCP
 
-Cuando un empleado pregunta: "¿Por qué no puedo acceder a la base de datos de clientes?", el asistente podría:
+Cuando un empleado pregunta: **¿Por qué no puedo acceder a la base de datos de clientes?**, el asistente podría:
 
 - Verificar el estado actual de la base de datos
 - Revisar los logs de acceso del usuario
@@ -212,16 +212,16 @@ Un hospital podría implementar un asistente para médicos que:
 2. Accede a las últimas investigaciones médicas a través de otro servidor MCP
 3. Puede ayudar a programar exámenes mediante un tercer servidor MCP
 
-Cuando un médico pregunta: "¿Qué tratamiento recomiendas para este paciente con hipertensión y diabetes?", el asistente puede:
+Cuando un médico pregunta: **¿Qué tratamiento recomiendas para este paciente con hipertensión y diabetes?**, el asistente puede:
 
 - Revisar el historial médico completo del paciente
 - Considerar las últimas investigaciones sobre tratamientos combinados
 - Sugerir opciones basadas en los medicamentos disponibles en la farmacia del hospital
 - Programar los exámenes de seguimiento necesarios
 
-## Implementando un Cliente MCP Completo
+## Implementando un Cliente MCP de Extremo a Extremo
 
-Veamos cómo implementar un cliente MCP más completo para un caso real de un sistema de recursos humanos:
+A continuación exploraremos cómo construir un cliente MCP totalmente funcional aplicado a un escenario típico dentro de un sistema de gestión de recursos humanos:
 
 ```java
 @SpringBootApplication
@@ -289,13 +289,13 @@ spring:
         streamable-http:
           connections:
             employeeData:
-              url: https://hr-data.company.internal/mcp
+              url: https://hr-data.geovannycode.internal/mcp
             companyPolicies:
-              url: https://policies.company.internal/mcp
+              url: https://policies.geovannycode.internal/mcp
             benefitsSystem:
-              url: https://benefits.company.internal/mcp
+              url: https://benefits.geovannycode.internal/mcp
             ticketingSystem:
-              url: https://tickets.company.internal/mcp
+              url: https://tickets.geovannycode.internal/mcp
 ```
 
 Este ejemplo implementa un asistente de recursos humanos que puede acceder a:
