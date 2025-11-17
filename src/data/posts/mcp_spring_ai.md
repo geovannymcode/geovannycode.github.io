@@ -364,6 +364,28 @@ A medida que su aplicación crece, puede escalar su implementación MCP:
 3. **Monitoreo**: Utilice Spring Actuator para monitorear el rendimiento de sus clientes y servidores MCP.
 
 4. **Orquestación**: Utilice herramientas como Kubernetes para orquestar sus servidores MCP.
+   
+---
+
+## 🚀 Proyecto de Ejemplo: MCP Client para Spring AI
+
+Si desea profundizar aún más y ver una implementación funcional, puede consultar el proyecto de ejemplo que acompaña este artículo.  
+Allí encontrará un cliente MCP completo construido con Spring Boot, patrones recomendados y ejemplos listos para ejecutar.
+
+👉 **Repositorio GitHub:**  
+https://github.com/geovannymcode/mcp-client-example
+
+Este proyecto incluye:
+
+- Configuración base para Spring AI y clientes MCP  
+- Ejemplos de transporte (HTTP, SSE, STDIO)  
+- Integración con herramientas MCP  
+- Buenas prácticas de estructura y organización del código  
+- Ejemplo de endpoints para probar interacciones reales con LLMs  
+
+Ideal para usar como plantilla en sus propios proyectos o como guía de referencia para entender la arquitectura completa.
+
+---
 
 ## Conclusión: El Futuro es Aumentado
 
@@ -387,23 +409,14 @@ A medida que el ecosistema MCP continúa madurando, podemos esperar ver más her
    Documentación oficial de Spring AI  
    https://docs.spring.io/spring-ai/reference/
 
-3. **Spring AI - MCP Client**  
-   Guía de implementación de clientes MCP con Spring AI  
-   https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client.html
-
-4. **Spring AI - MCP Server**  
-   Documentación sobre servidores MCP  
-   https://docs.spring.io/spring-ai/reference/api/mcp/mcp-server.html
-
-5. **OpenAI API Reference**  
+3. **OpenAI API Reference**  
    Documentación de la API de OpenAI  
    https://platform.openai.com/docs/api-reference
 
-6. **Spring Boot Documentation**  
+4. **Spring Boot Documentation**  
    Documentación oficial de Spring Boot  
    https://spring.io/projects/spring-boot
 
-7. **Spring Security**  
+5. **Spring Security**  
    Guía de implementación de seguridad en Spring  
    https://spring.io/projects/spring-security
-
