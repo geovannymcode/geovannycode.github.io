@@ -1,15 +1,19 @@
 ---
 #preview
-title: 'Spring Boot 4 y Spring Framework 7: La Evolución Deliberada del Desarrollo Java Empresarial'
-date: '2025-11-07'
-image: "/img/blog/1.png"
+title: 'Spring AI + MCP: Fundamentos y Aplicaciones Prácticas para Desarrolladores'
+date: '2025-11-20'
+image: "/img/blog/2.png"
 categories:
+    - Inteligencia Artificial
     - Backend
 tags:
     - Java
-    - Spring Boot
+    - Spring AI
+    - MCP
+    - LLMs
+    - Arquitectura
 author: Geovanny Mendoza
-short: Exploramos cómo las últimas versiones de Spring Boot y Spring Framework están transformando el desarrollo Java moderno con un enfoque más modular, eficiente y preparado para la nube.
+short: Cómo integrar Model Context Protocol y Spring AI para construir aplicaciones de IA aumentada con datos reales, herramientas externas y capacidades personalizadas.
 ---
 
 # Spring AI + MCP: Fundamentos y Aplicaciones Prácticas para Desarrolladores
