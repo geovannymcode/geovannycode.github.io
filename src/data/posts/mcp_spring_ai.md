@@ -29,11 +29,8 @@ El MCP es un estándar emergente que permite a los desarrolladores aumentar las 
 Para entender la importancia del MCP, primero debemos comprender las limitaciones de los LLMs:
 
 1. **Conocimiento congelado**: Los LLMs solo conocen información hasta su fecha de corte de entrenamiento. Cualquier evento o dato posterior es desconocido para ellos.
-
 2. **Sin acceso a datos propietarios**: No tienen acceso natural a información específica de su empresa, documentos internos o bases de datos propietarias.
-
 3. **Incapacidad para ejecutar acciones**: No pueden interactuar directamente con sistemas externos como APIs, bases de datos o servicios web.
-
 4. **Sin acceso a información en tiempo real**: No pueden acceder a información actualizada sobre mercados financieros, clima, noticias recientes, etc.
 
 Un ejemplo práctico: si pregunta a un LLM estándar "¿Cuál es el estado actual de nuestro servidor de producción?" o "¿Cuál fue el último correo electrónico de nuestro cliente principal?", no podrá responder con precisión porque carece de acceso a sus sistemas.
@@ -106,9 +103,7 @@ Este ejemplo configura un cliente MCP que se conecta a dos servidores MCP difere
 Spring AI soporta tres tipos principales de transporte para servidores MCP:
 
 1. **Streamable HTTP**: El enfoque preferido para servidores MCP remotos. Utiliza HTTP para la comunicación y admite streaming de respuestas.
-
 2. **SSE (Server-Sent Events)**: Utiliza eventos enviados por el servidor para comunicación unidireccional desde el servidor al cliente.
-
 3. **STDIO (Standard Input/Output)**: Ideal para servidores MCP locales que se ejecutan en el mismo sistema.
 
 La elección del transporte depende de su caso de uso específico y la ubicación del servidor MCP.
@@ -314,15 +309,10 @@ Este ejemplo implementa un asistente de recursos humanos que puede acceder a:
 Los clientes MCP ofrecen numerosas ventajas para aplicaciones modernas de IA:
 
 1. **Independencia del proveedor**: Puede cambiar entre diferentes LLMs sin modificar su código o sus integraciones.
-
 2. **Acceso a datos privados sin exposición**: Los datos sensibles permanecen dentro de sus sistemas, solo se comparten los resultados relevantes.
-
 3. **Información siempre actualizada**: Acceda a información en tiempo real sin necesidad de reentrenar modelos.
-
 4. **Extensibilidad**: Agregue nuevas capacidades simplemente conectando nuevos servidores MCP.
-
 5. **Reducción de hallucinations**: Al proporcionar contexto preciso y actualizado, reduce significativamente las respuestas incorrectas o "alucinaciones" de los LLMs.
-
 6. **Composabilidad**: Combine múltiples servidores MCP para crear soluciones complejas y potentes.
 
 ## Consideraciones de Seguridad
@@ -330,11 +320,8 @@ Los clientes MCP ofrecen numerosas ventajas para aplicaciones modernas de IA:
 Al implementar clientes MCP, debe considerar:
 
 1. **Autenticación y autorización**: Asegure sus servidores MCP con autenticación adecuada, como Spring Security.
-
 2. **Control de acceso**: Limite qué herramientas están disponibles para diferentes usuarios o contextos.
-
 3. **Validación de datos**: Verifique la entrada y salida de datos para evitar vulnerabilidades.
-
 4. **Auditoría**: Implemente registros de auditoría para rastrear el uso de herramientas MCP.
 
 ```java
@@ -362,13 +349,11 @@ public class MCPSecurityConfig {
 A medida que su aplicación crece, puede escalar su implementación MCP:
 
 1. **Múltiples instancias**: Ejecute múltiples instancias de sus servidores MCP para manejar cargas mayores.
-
 2. **Caché**: Implemente caché para respuestas comunes para reducir la carga en sus servidores MCP.
-
 3. **Monitoreo**: Utilice Spring Actuator para monitorear el rendimiento de sus clientes y servidores MCP.
-
 4. **Orquestación**: Utilice herramientas como Kubernetes para orquestar sus servidores MCP.
-   
+
+
 ---
 
 ## 🚀 Proyecto de Ejemplo: MCP Client para Spring AI
@@ -408,19 +393,15 @@ A medida que el ecosistema MCP continúa madurando, podemos esperar ver más her
 1. **Anthropic - Model Context Protocol**  
    Documentación oficial del protocolo MCP  
    https://www.anthropic.com/news/model-context-protocol
-
 2. **Spring AI - Documentation**  
    Documentación oficial de Spring AI  
    https://docs.spring.io/spring-ai/reference/
-
 3. **OpenAI API Reference**  
    Documentación de la API de OpenAI  
    https://platform.openai.com/docs/api-reference
-
 4. **Spring Boot Documentation**  
    Documentación oficial de Spring Boot  
    https://spring.io/projects/spring-boot
-
 5. **Spring Security**  
    Guía de implementación de seguridad en Spring  
    https://spring.io/projects/spring-security
