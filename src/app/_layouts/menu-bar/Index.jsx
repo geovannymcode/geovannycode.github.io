@@ -110,7 +110,7 @@ const MenuBarModule = () => {
                     {curLabel !== 0 ? (
                         <Link href={curLabel.link}>{curLabel.label}</Link>
                     ) : (
-                        <Link href="/">Home</Link>
+                        <Link href="/">Acerca</Link>
                     )}
                 </div>
                 {/* current page title end */}

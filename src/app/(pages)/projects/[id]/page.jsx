@@ -127,7 +127,7 @@ async function ProjectDetail ( { params } ) {
                 {/* button */}
                 {postData.description.button !== undefined &&
                 <div className="art-buttons-frame">
-                    <a href={postData.description.button.label} className="art-link art-color-link art-w-chevron" target="_blank" data-no-swup>{postData.description.button.label}</a>
+                    <a href={postData.description.button.link} className="art-link art-color-link art-w-chevron">{postData.description.button.label}</a>
                 </div>
                 }
             </div>
@@ -189,11 +189,11 @@ async function ProjectDetail ( { params } ) {
                 {/* main title */}
                 <div className="art-banner-title text-center">
                     {/* title */}
-                    <h1 className="mb-15">Ready to order your project?</h1>
+                    <h1 className="mb-15">¿Listo para ordenar tu proyecto?</h1>
                     {/* suptitle */}
-                    <div className="art-lg-text art-code mb-25">Let's work together!</div>
+                    <div className="art-lg-text art-code mb-25">¡Trabajemos juntos!</div>
                     {/* button */}
-                    <Link href="/contact" className="art-btn art-btn-md"><span>Contact me</span></Link>
+                    <Link href="/contact" className="art-btn art-btn-md"><span>Contáctame</span></Link>
                 </div>
                 {/* main title end */}
                 </div>
@@ -205,14 +205,14 @@ async function ProjectDetail ( { params } ) {
             <div className="art-a art-pagination">
                 {/* button */}
                 {prev.id != 0 &&
-                <Link href={`/projects/${prev.id}`} className="art-link art-color-link art-w-chevron art-left-link"><span>Previous project</span></Link>
+                <Link href={`/projects/${prev.id}`} className="art-link art-color-link art-w-chevron art-left-link"><span>Proyecto anterior</span></Link>
                 }
                 <div className="art-pagination-center art-m-hidden">
-                <Link className="art-link" href="/projects">All projects</Link>
+                <Link className="art-link" href="/projects">Todos los proyectos</Link>
                 </div>
                 {/* button */}
                 {next.id != 0 &&
-                <Link href={`/projects/${next.id}`} className="art-link art-color-link art-w-chevron"><span>Next project</span></Link>
+                <Link href={`/projects/${next.id}`} className="art-link art-color-link art-w-chevron"><span>Siguiente proyecto</span></Link>
                 }
             </div>
             {/* projects navigation end */}
