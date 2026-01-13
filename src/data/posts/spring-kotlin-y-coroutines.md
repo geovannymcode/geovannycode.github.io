@@ -40,7 +40,7 @@ services:
   ##POSTGRESQL
   postgres:
     container_name: postgres
-    image: postgres:12
+    image: postgres:17
     ports:
       - "5432:5432"
     restart: unless-stopped
@@ -58,14 +58,18 @@ docker compose -f dev-stack.yml up -d
 
 ## 3. Generar Nuevo Proyecto
 
-Una vez hecho esto, vayamos a la pagina de Spring Initializr y generamos un nuevo proyecto como se muestra: 
+Una vez hecho esto, vayamos a la pagina de Spring Initializr y generamos un nuevo proyecto con la siguiente configuración:
 
-- Java: a 21
-- Spring Boot: a 4.x
-- Kotlin: a 2.2.x
-- Dependencias en Initializr: Reactive Web, Spring Data R2DBC, PostgreSQL Driver (y opcional Validation)
+- Java: 21
+- Spring Boot: 4.x
+- Kotlin: 2.2.x
+- Dependencias en Initializr:
+  - Reactive Web (Spring WebFlux)
+  - Spring Data R2DBC
+  - PostgreSQL Driver
+  - (Opcional) Validation
 
-La configuración anterior es todo lo que necesitamos para crear un nuevo proyecto Spring Boot 3 con Kotlin y Coroutines. Además, para conectarnos a la base de datos Postgres, necesitamos dos dependencias más: Spring Data R2DBC y PostgreSQL Driver.
+La configuración anterior es todo lo que necesitamos para crear un nuevo proyecto Spring Boot con Kotlin y Coroutines. Además, para conectarnos a la base de datos Postgres, necesitamos dos dependencias más: Spring Data R2DBC y PostgreSQL Driver.
 
 Una vez hecho esto, vamos hacer click al botón Generate e importar el proyecto a nuestro IDE (IntelliJ IDEA).
 
@@ -73,13 +77,13 @@ Una vez hecho esto, vamos hacer click al botón Generate e importar el proyecto 
 
 En esta sección exploraremos la gestión de la base de datos, para este ejemplo utilizamos el mismo IDE IntelliJ IDEA. Seleccionamos el icono Database como se puede observar en la figura # 2
 
-Figura # 2
+![Figura #2: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-2.png)
 
 ### 4.1 Conectar a la interfaz de la base de datos
 
 Después de haber seleccionado la Database, procedemos adicionar la conexión con nuestra base de datos, para este ejemplo utilizamos la BD de PostgreSQL como se puede observar en la figura # 3.
 
-Figura # 3
+![Figura #3: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-3.png)
 
 El primer paso es presionar con un click en el signo (+) y después seleccionamos el Data Source.
 Seleccionamos la base de datos PostgreSQL.
@@ -88,7 +92,7 @@ Seleccionamos la base de datos PostgreSQL.
 
 En este paso ingresamos el user que tendrá el valor por defecto root y para el password  su valor será 123, como se puede observar en la figura # 4.
 
-Figura # 4
+![Figura #4: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-4.png)
 
 Si es la primera vez que vamos a realizar una conexión, nos toca descargar el driver de la base de datos.
 
@@ -126,7 +130,7 @@ INSERT INTO app.student (first_name, last_name, email, age, school_id) VALUES('L
 
 Pegamos el script en la ventana de la consola, como se puede observar la figura # 5.
 
-Figura # 5
+![Figura #5: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-5.png)
 
 Después de ejecutar el script en la consola, podemos observar como en la figura # 6 que se ha creado la base de datos con sus respectivas tablas.
 
