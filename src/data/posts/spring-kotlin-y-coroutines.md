@@ -134,11 +134,11 @@ Pegamos el script en la ventana de la consola, como se puede observar la figura 
 
 Después de ejecutar el script en la consola, podemos observar como en la figura # 6 que se ha creado la base de datos con sus respectivas tablas.
 
-Figura # 6
+![Figura #6: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-6.png)
 
 Continuando con el proceso de creación e inserción de registros, en este paso realizaremos una consulta a la tabla de student como se puede observar en la figura # 7
 
-Figura # 7
+![Figura #7: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-7.png)
 
 Hasta aquí hemos configurado la base de datos, en el paso siguiente entraremos en materia para trabajar sobre el proyecto, lo primero que vamos hacer es configurar la conexión con la base de datos.
 
@@ -602,13 +602,13 @@ En esta sección se visualiza las pruebas exitosas de postman con los métodos G
 
 Acá se puede visualizar el resultado de la prueba del método GET donde nos muestra todo los estudiantes registrados, como se puede visualizar en la figura # 8
 
-Figura # 8
+![Figura #8: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-8.png)
 
 ### 11.2 Prueba del Método POST:
 
 Continuando se puede visualizar la creación de un estudiante con el método POST como se puede observar en la figura # 9.
 
-Figura # 9
+![Figura #9: Ventana Database en IntelliJ IDEA](/img/blog/spring-kotlin-coroutines/fig-9.png)
 
 ## 12. Conclusión
 
@@ -622,7 +622,3 @@ Espero que te haya gustado este artículo y estaré eternamente agradecido por t
 
 - https://codersee.com/reactive-rest-api-with-spring-kotlin-and-coroutines/
 - https://xebia.com/blog/spring-data-r2dbc-and-kotlin-coroutines/
-
-### Libro:
-
-- Full Stack Development with Spring Boot and React: Build modern and scalable web applications using the power of Java and React, 3rd Edition
