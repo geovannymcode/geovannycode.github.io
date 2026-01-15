@@ -1,6 +1,6 @@
 ---
 title: 'Construir una Api Rest reactiva con Spring, Kotlin y Coroutines'
-date: '2023-05-27'
+date: '2026-01-16'
 image: "/img/blog/3.png"
 categories:
   - Backend
