@@ -13,6 +13,7 @@ tags:
   - R2DBC
   - PostgreSQL
 author: Geovanny Mendoza
+short: Guía paso a paso para construir una API REST reactiva desde cero usando Spring Boot, Kotlin y Coroutines, integrando R2DBC con PostgreSQL, Docker y Kotlin Flows para lograr un backend no bloqueante, claro y mantenible.
 ---
 
 # Construir una Api Rest reactiva con Spring, Kotlin y Coroutines

@@ -34,34 +34,7 @@ Otro ejemplo claro es la separación entre los datos y su representación. Por l
 
 Veamos un ejemplo hipotético y simplificado que ilustra este concepto en un contexto Java:
 
-### Código original
-
-```java
-public class CuentaResource {
-    private Usuario usuario;
-
-    public CuentaResource(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Map<String, Object> toMap() {
-        List<Transaccion> transaccionesPopulares = usuario.getTransacciones()
-                .stream()
-                .filter(t -> t.getConteoLikes() > 50 && t.getConteoCompartidos() > 25)
-                .sorted(Comparator.comparing(Transaccion::getVisitas).reversed())
-                .limit(10)
-                .collect(Collectors.toList());
-
-        Map<String, Object> resultado = new HashMap<>();
-        resultado.put("id", usuario.getId());
-        resultado.put("nombre_completo", usuario.getNombreCompleto());
-        resultado.put("transacciones_populares", transaccionesPopulares);
-        return resultado;
-    }
-}
-```
-
-### Versión Java 21+
+### Código
 
 ```java
 public class CuentaResource {
@@ -94,37 +67,6 @@ La solución a este problema es separar las responsabilidades:
 
 ```java
 public class CuentaResource {
-    private Usuario usuario;
-
-    public CuentaResource(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Map<String, Object> toMap() {
-        Map<String, Object> resultado = new HashMap<>();
-        resultado.put("id", usuario.getId());
-        resultado.put("nombre_completo", usuario.getNombreCompleto());
-        resultado.put("transacciones_populares", usuario.obtenerTransaccionesPopulares());
-        return resultado;
-    }
-}
-
-public class Usuario {
-    public List<Transaccion> obtenerTransaccionesPopulares() {
-        return this.getTransacciones()
-                .stream()
-                .filter(t -> t.getConteoLikes() > 50 && t.getConteoCompartidos() > 25)
-                .sorted(Comparator.comparing(Transaccion::getVisitas).reversed())
-                .limit(10)
-                .collect(Collectors.toList());
-    }
-}
-```
-
-### Versión Java 21+
-
-```java
-public class CuentaResource {
     private final Usuario usuario;
 
     public CuentaResource(Usuario usuario) {
@@ -150,6 +92,7 @@ public class Usuario {
     }
 }
 ```
+
 Esto permite que CuentaResource se enfoque únicamente en la representación, mientras que Usuario maneja la lógica de consulta específica. Esto cumple con el Principio de Responsabilidad Única, ya que cada clase ahora tiene una sola razón para cambiar.
 
 Indicadores de que estás violando el SRP incluyen:
@@ -180,35 +123,6 @@ interface Bloqueable {
     boolean estaBloqueada();
 }
 
-class Cuenta implements Bloqueable {
-    private boolean bloqueada;
-
-    @Override
-    public void bloquear() {
-        bloqueada = true;
-    }
-
-    @Override
-    public void desbloquear() {
-        bloqueada = false;
-    }
-
-    @Override
-    public boolean estaBloqueada() {
-        return bloqueada;
-    }
-}
-```
-
-### Versión Java 21+
-
-```java
-interface Bloqueable {
-    void bloquear();
-    void desbloquear();
-    boolean estaBloqueada();
-}
-
 final class Cuenta implements Bloqueable {
     private boolean bloqueada;
 
@@ -222,29 +136,6 @@ Digamos que ahora necesitamos añadir la funcionalidad de tarjetas de crédito a
 ### Código original
 
 ```java
-class TarjetaCredito implements Bloqueable {
-    private boolean bloqueada;
-
-    @Override
-    public void bloquear() {
-        bloqueada = true;
-    }
-
-    @Override
-    public void desbloquear() {
-        bloqueada = false;
-    }
-
-    @Override
-    public boolean estaBloqueada() {
-        return bloqueada;
-    }
-}
-```
-
-### Versión Java 21+
-
-```java
 final class TarjetaCredito implements Bloqueable {
     private boolean bloqueada;
 
@@ -253,48 +144,12 @@ final class TarjetaCredito implements Bloqueable {
     @Override public boolean estaBloqueada() { return bloqueada; }
 }
 ```
+
 ¡Esto es bastante estándar, pero piensa en lo que ocurrió aquí! Acabamos de añadir nueva funcionalidad a múltiples clases sin cambiarlas. Extendimos nuestras clases en lugar de modificarlas. Esto es una gran ventaja a largo plazo y es por eso que la programación orientada a interfaces y el polimorfismo en general son herramientas increíbles.
 
 Vamos a ver otro ejemplo que utiliza polimorfismo e interfaces. Imagina que estamos trabajando en una aplicación que maneja diferentes tipos de cuentas bancarias. Algunas cuentas tienen intereses, otras tienen beneficios por transacciones múltiples, etc. Aquí está la estructura simplificada:
 
 ### Código original
-
-```java
-abstract class TipoCuenta {
-    public abstract double calcularInteres(double saldo);
-}
-
-class CuentaAhorro extends TipoCuenta {
-    @Override
-    public double calcularInteres(double saldo) {
-        return saldo * 0.02; // 2% de interés
-    }
-}
-
-class CuentaCheques extends TipoCuenta {
-    @Override
-    public double calcularInteres(double saldo) {
-        // No genera intereses
-        return 0;
-    }
-}
-
-class CuentaBonificada extends TipoCuenta {
-    private int transacciones;
-
-    public CuentaBonificada(int transacciones) {
-        this.transacciones = transacciones;
-    }
-
-    @Override
-    public double calcularInteres(double saldo) {
-        // Bonificación por transacciones
-        return transacciones > 100 ? saldo * 0.05 : 0;
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 public sealed abstract class TipoCuenta
@@ -332,28 +187,10 @@ public final class CuentaBonificada extends TipoCuenta {
     }
 }
 ```
+
 Estas clases pueden calcular el interés de una cuenta según su tipo. Necesitamos una forma de crear estas clases fácilmente. Aquí es donde el patrón de diseño “fábrica” puede ser útil:
 
 ### Código original
-
-```java
-class FabricaTipoCuenta {
-    public TipoCuenta crearTipoCuenta(String tipo, int transacciones) {
-        switch (tipo) {
-            case "ahorro":
-                return new CuentaAhorro();
-            case "cheques":
-                return new CuentaCheques();
-            case "bonificada":
-                return new CuentaBonificada(transacciones);
-            default:
-                throw new IllegalArgumentException("Tipo de cuenta desconocido");
-        }
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 class FabricaTipoCuenta {
@@ -367,6 +204,7 @@ class FabricaTipoCuenta {
     }
 }
 ```
+
 ¿Ves lo que hicimos? Eliminamos la necesidad de modificar las clases existentes cada vez que surgen nuevos requisitos. En su lugar, extendemos nuestras clases con nuevas funcionalidades. Todo lo que necesitábamos era una fábrica, algunas clases estratégicas y un poco de polimorfismo.
 
 ## Principio de Sustitución de Liskov
@@ -378,36 +216,6 @@ Aunque parece obvio, este es uno de los principios más fundamentales y, a veces
 Veamos un ejemplo relacionado con el procesamiento de transacciones en un sistema bancario:
 
 ### Código original
-
-```java
-abstract class ProcesadorDePagos {
-    abstract public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException;
-}
-
-class ProcesadorVisa extends ProcesadorDePagos {
-    @Override
-    public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException {
-        // Lógica específica para procesar pagos con Visa
-        if (monto > cuenta.getSaldo()) {
-            throw new ProcesamientoPagoException("Fondos insuficientes");
-        }
-        cuenta.decrementarSaldo(monto);
-    }
-}
-
-class ProcesadorMastercard extends ProcesadorDePagos {
-    @Override
-    public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException {
-        // Lógica específica para procesar pagos con Mastercard
-        if (monto > cuenta.getSaldo() * 1.1) {  // Supone una comisión por uso
-            throw new ProcesamientoPagoException("Fondos insuficientes, incluida la comisión");
-        }
-        cuenta.decrementarSaldo(monto * 1.1);
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 abstract class ProcesadorDePagos {
@@ -435,43 +243,13 @@ final class ProcesadorMastercard extends ProcesadorDePagos {
     }
 }
 ```
+
 En el ejemplo anterior, aunque ProcesadorVisa y ProcesadorMastercard parecen cumplir con la interfaz definida por ProcesadorDePagos, hay una discrepancia importante en cómo manejan las comisiones y los cheques de fondos. Esto podría llevar a problemas si se espera que cualquier ProcesadorDePagos maneje la cuenta de la misma manera.
 
 Corrección del diseño para cumplir con Liskov:
 Para asegurarnos de que cumplimos con el principio de Liskov, es fundamental que todas las subclases manejen las operaciones de manera coherente. Esto puede significar centralizar o estandarizar cómo se manejan las comisiones o asegurarse de que las comprobaciones y efectos son transparentes y consistentes entre subclases.
 
 ### Código original
-
-```java
-abstract class ProcesadorDePagos {
-    abstract public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException;
-
-    protected void verificarFondos(Cuenta cuenta, double monto) throws ProcesamientoPagoException {
-        if (monto > cuenta.getSaldo()) {
-            throw new ProcesamientoPagoException("Fondos insuficientes");
-        }
-    }
-}
-
-class ProcesadorVisa extends ProcesadorDePagos {
-    @Override
-    public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException {
-        verificarFondos(cuenta, monto);
-        cuenta.decrementarSaldo(monto);
-    }
-}
-
-class ProcesadorMastercard extends ProcesadorDePagos {
-    @Override
-    public void procesarPago(Cuenta cuenta, double monto) throws ProcesamientoPagoException {
-        double montoConComision = monto * 1.1;
-        verificarFondos(cuenta, montoConComision);
-        cuenta.decrementarSaldo(montoConComision);
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 abstract class ProcesadorDePagos {
@@ -501,6 +279,7 @@ final class ProcesadorMastercard extends ProcesadorDePagos {
     }
 }
 ```
+
 Acá podemos observar que ambas clases de ProcesadorDePagos utilizan un método común para verificar los fondos antes de proceder con el decremento del saldo. Este enfoque garantiza que el comportamiento de verificación sea consistente y previsible a través de diferentes implementaciones.
 
 Como puedes ver, el principio es bastante simple en teoría, pero en la práctica es fácil cometer errores que lo violen. Asegurarse de que las subclases puedan sustituir a la clase base sin efectos secundarios requiere una atención cuidadosa al diseño de tu sistema. Esta atención asegura que las funcionalidades extendidas se integren sin problemas y sin introducir incompatibilidades o comportamientos inesperados.
@@ -513,7 +292,7 @@ Este principio sugiere que deberíamos tener muchas interfaces pequeñas en luga
 
 Supongamos que estamos trabajando en una aplicación bancaria que maneja cuentas, transacciones, informes de usuarios y cálculos fiscales. Podríamos pensar en crear una clase genérica como Cuenta, y tratar de manejar todo con métodos en esta clase. Así, tendríamos algo como:
 
-### Código original
+### Código
 
 ```java
 interface Cuenta {
@@ -524,7 +303,7 @@ interface Cuenta {
 ```
 Puedes ver el problema aquí. Esta interfaz es demasiado grande. Maneja demasiadas cosas que son independientes entre sí. En lugar de escribir una interfaz enorme para manejar todo, separamos estas responsabilidades en interfaces más pequeñas:
 
-### Código original
+### Código
 
 ```java
 interface Transaccionable {
@@ -539,66 +318,12 @@ interface InformeGenerable {
     void generarInforme();
 }
 ```
+
 Estas interfaces son ejemplos de cómo podemos aplicar el Principio de Segregación de Interfaces en el desarrollo de software, asegurando que las clases que implementan estas interfaces no se vean forzadas a implementar métodos que no necesitan, manteniendo así el código más limpio, modular y fácil de mantener.
 
 Veamos un ejemplo más concreto:
 
 ### Código original
-
-```java
-// Implementación de una Cuenta Corriente que procesa transacciones y calcula impuestos.
-class CuentaCorriente implements Transaccionable, ImpuestoCalculable {
-    private double saldo;
-
-    // Constructor para inicializar el saldo de la cuenta corriente.
-    public CuentaCorriente(double saldoInicial) {
-        this.saldo = saldoInicial;
-    }
-
-    // Lógica para procesar transacciones, como depósitos y retiros.
-    @Override
-    public void procesarTransaccion(double monto) {
-        // Aquí, agregamos o sustraemos del saldo según el monto sea positivo o negativo.
-        this.saldo += monto;
-        System.out.println("Transacción procesada. Saldo actual: " + this.saldo);
-    }
-
-    // Lógica para calcular los impuestos aplicables a la cuenta corriente.
-    @Override
-    public void calcularImpuestos() {
-        // Supongamos un impuesto fijo del 0.3% del saldo.
-        double impuesto = this.saldo * 0.003;
-        System.out.println("Impuestos calculados: " + impuesto);
-    }
-}
-
-// Implementación de una Cuenta de Ahorros que procesa transacciones y genera informes.
-class CuentaDeAhorros implements Transaccionable, InformeGenerable {
-    private double saldo;
-
-    // Constructor para inicializar el saldo de la cuenta de ahorros.
-    public CuentaDeAhorros(double saldoInicial) {
-        this.saldo = saldoInicial;
-    }
-
-    // Lógica para procesar transacciones específicas de una cuenta de ahorros.
-    @Override
-    public void procesarTransaccion(double monto) {
-        // Operaciones de depósito o retiro modifican el saldo.
-        this.saldo += monto;
-        System.out.println("Transacción procesada en cuenta de ahorros. Saldo actual: " + this.saldo);
-    }
-
-    // Generación de un informe de cuenta, podría ser un estado de cuenta mensual.
-    @Override
-    public void generarInforme() {
-        // Podemos imaginar que este método compila transacciones y saldo para un reporte.
-        System.out.println("Informe generado para la cuenta con saldo: " + this.saldo);
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 // Implementación de una Cuenta Corriente que procesa transacciones y calcula impuestos.
@@ -642,6 +367,7 @@ final class CuentaDeAhorros implements Transaccionable, InformeGenerable {
     }
 }
 ```
+
 En este diseño, las clases CuentaCorriente y CuentaDeAhorros implementan específicamente aquellas interfaces que son esenciales para sus operaciones. Por ejemplo, la CuentaCorriente maneja cálculos de impuestos, una necesidad para cuentas que frecuentemente procesan transacciones comerciales, mientras que la CuentaDeAhorros está equipada para generar informes sobre el crecimiento de los ahorros, lo cual no es necesario en una CuentaCorriente.
 
 Este enfoque de segregación de interfaces asegura que cada clase solo contenga los métodos que realmente utiliza, evitando la inclusión de funcionalidades innecesarias. Al dividir las responsabilidades de esta manera, el sistema no solo se vuelve más limpio y mantenible, sino también más intuitivo y escalable. Permite a los desarrolladores, ya sean novatos o con experiencia, comprender rápidamente la estructura del sistema y facilita la incorporación de nuevas características o adaptaciones a los cambios en los requisitos.
@@ -655,31 +381,6 @@ Este principio sugiere que debemos utilizar clases abstractas o interfaces en nu
 Veamos cómo podríamos aplicar esto en un sistema bancario que necesita interactuar con diferentes tipos de servicios de consulta de crédito para evaluar la solvencia de los clientes:
 
 ### Código original
-
-```java
-// Interfaz para proveedores de datos de crédito
-interface ProveedorDatosCredito {
-    double obtenerPuntuacionCredito(String idCliente);
-}
-
-// Implementación concreta para un proveedor de datos de crédito
-class EquifaxProveedor implements ProveedorDatosCredito {
-    public double obtenerPuntuacionCredito(String idCliente) {
-        // Lógica para conectarse a la API de Equifax
-        return 650.0; // Simulación de una respuesta
-    }
-}
-
-// Implementación concreta para otro proveedor de datos de crédito
-class TransUnionProveedor implements ProveedorDatosCredito {
-    public double obtenerPuntuacionCredito(String idCliente) {
-        // Lógica para conectarse a la API de TransUnion
-        return 700.0; // Simulación de una respuesta
-    }
-}
-```
-
-### Versión Java 21+
 
 ```java
 // Interfaz para proveedores de datos de crédito
