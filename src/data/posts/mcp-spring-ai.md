@@ -353,7 +353,6 @@ A medida que su aplicación crece, puede escalar su implementación MCP:
 3. **Monitoreo**: Utilice Spring Actuator para monitorear el rendimiento de sus clientes y servidores MCP.
 4. **Orquestación**: Utilice herramientas como Kubernetes para orquestar sus servidores MCP.
 
-
 ---
 
 ## 🚀 Proyecto de Ejemplo: MCP Client para Spring AI
