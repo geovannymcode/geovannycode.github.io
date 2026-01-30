@@ -96,9 +96,9 @@ const MenuBarModule = () => {
                 {/* language change */}
                 <ul className="art-language-change">
                     {/* language item */}
-                    <li><a href="?lang=fr">FR</a></li>
+                    <li><a href="?lang=en">EN</a></li>
                     {/* language item */}
-                    <li className="art-active-lang"><a href="?lang=en">EN</a></li>
+                    <li className="art-active-lang"><a href="?lang=es">ES</a></li>
                 </ul>
                 {/* language change end */}
 
