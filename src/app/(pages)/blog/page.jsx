@@ -63,7 +63,7 @@ async function Blog() {
               currentPage={postsData.currentPage}
               totalItems={postsData.totalPosts}
               perPage={AppData.settings.perPage}
-              renderPageLink={(page) => `/blog/page/${page}`}
+              renderPageLink={(page) => page === 1 ? '/blog/' : `/blog/page/${page}/`}
             />
 
           </div>
