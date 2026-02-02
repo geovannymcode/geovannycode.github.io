@@ -1,9 +1,7 @@
 import { Poppins, Courier_Prime } from 'next/font/google'
-//import 'highlight.js/styles/vs2015.css';
 import 'highlight.js/styles/github-dark-dimmed.css';
-// /import 'highlight.js/styles/atom-one-dark.css';
-// import 'highlight.js/styles/github-dark.css';
 import CodeCopyEnhancer from './_components/CodeCopyEnhancer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const primary_font = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -58,6 +56,7 @@ const Layouts = ({
         </div>
         {/* app end */}
       </body>
+      <GoogleAnalytics gaId="G-7E7M7VG3Z0" />
     </html>
   );
 };
