@@ -2,7 +2,7 @@
 #preview
 title: 'CRUD con Vaadin Flow 25: Despliegue con Docker Compose y PostgreSQL'
 date: '2026-03-25'
-image: "/img/blog/10.png"
+image: "/img/blog/N.png"
 categories:
     - Backend
     - Java
@@ -20,15 +20,15 @@ short: Construye un CRUD completo con Vaadin Flow 25.0.7, Spring Boot 4 y Postgr
 
 ## Tu solución Vaadin empieza aquí
 
-En este artículo construimos una aplicación CRUD con Vaadin Flow 25, Spring Data JPA y Spring Boot. Spring Boot se encarga de la configuración de JPA y Vaadin Flow de la interfaz de usuario. Todo el código de UI va en Java, sin HTML, CSS ni JavaScript escritos a mano.
+En este artículo armamos una aplicación CRUD con Vaadin Flow 25, Spring Data JPA y Spring Boot 4. Toda la interfaz de usuario va en Java. Sin HTML, sin CSS a mano, sin JavaScript.
 
 ## ¿Qué es Vaadin Flow?
 
-Vaadin Flow es un framework Java para construir aplicaciones web sin escribir HTML o JavaScript directamente. En lugar de mezclar templates y lógica de backend, defines la UI con componentes Java, y Flow sincroniza esos componentes con el navegador de forma automática.
+Vaadin Flow es un framework Java para hacer aplicaciones web. La diferencia con otros enfoques es que no mezclas templates con lógica de backend: defines la UI con componentes Java y Flow se encarga de reflejarlos en el navegador.
 
-¿Por qué importa eso? Porque puedes tener un `<vaadin-grid>` en pantalla sin haber escrito una línea de TypeScript. Flow maneja la comunicación entre el servidor y el cliente; tú te concentras en la lógica.
+En la práctica, puedes tener un `<vaadin-grid>` en pantalla sin haber escrito una línea de TypeScript. La sincronización entre servidor y cliente es transparente; tú no la ves.
 
-En este proyecto aprovechamos eso para construir un CRUD completo directamente desde Java, alineado con las prácticas de desarrollo que ya usamos en el ecosistema Spring.
+La apuesta de este proyecto es justamente esa: el CRUD completo en Java, sin salir del ecosistema Spring.
 
 ## Requisitos
 
@@ -42,11 +42,7 @@ Las dependencias de Vaadin se gestionan a través de Maven; no necesitas instala
 
 ## Formas de configurar el proyecto
 
-Hay dos caminos para iniciar un proyecto con Vaadin y Spring Boot:
-
-**Vaadin Starter** — genera un proyecto preconfigurado desde [start.vaadin.com](https://start.vaadin.com). Ideal si quieres enfocarte en la UI desde el primer momento.
-
-**Spring Initializr** — crea el proyecto desde cero en [start.spring.io](https://start.spring.io) y agregas las dependencias manualmente. Es el camino que seguimos aquí, porque entender qué entra en el `pom.xml` importa cuando algo falla.
+Hay dos formas de arrancar. [Vaadin Starter](https://start.vaadin.com) genera un proyecto preconfigurado; útil si quieres ir directo a la UI. [Spring Initializr](https://start.spring.io) parte de cero y tú agregas las dependencias. Seguimos esta segunda opción porque entender qué entra en el `pom.xml` importa cuando algo falla.
 
 ## Paso 1: Crear la aplicación Spring Boot con Vaadin
 
@@ -63,7 +59,7 @@ Agrega estas dependencias desde Spring Initializr:
 - Spring Boot DevTools
 - Docker Compose Support
 
-Descarga el ZIP, descomprímelo e impórtalo en tu IDE. El `pom.xml` completo con el que trabajamos es el siguiente. Presta atención a tres puntos: el parent usa **Spring Boot 4.0.1**, las propiedades definen Java 25 y Vaadin 25.0.7, y se agregan los repositorios de Vaadin para obtener el BOM correcto.
+Descarga el ZIP, descomprímelo e impórtalo en tu IDE. El `pom.xml` con el que trabajamos es el siguiente. Nota que el parent es **Spring Boot 4.0.1**, las propiedades fijan Java 25 y Vaadin 25.0.7, y hay dos repositorios de Vaadin necesarios para resolver el BOM.
 
 ```xml
 <parent>
@@ -164,11 +160,11 @@ Descarga el ZIP, descomprímelo e impórtalo en tu IDE. El `pom.xml` completo co
 </dependencyManagement>
 ```
 
-Dos dependencias merecen una explicación. `vaadin-dev` habilita la recarga en caliente de componentes Vaadin durante el desarrollo, sin reiniciar el servidor. `spring-boot-docker-compose` es la novedad más importante de este setup: cuando arrancas la aplicación en modo dev, Spring Boot detecta el archivo `compose.yml` y levanta los servicios Docker automáticamente. Cuando detienes la app, los detiene. No hace falta correr `docker compose up` a mano.
+Vale la pena mencionar dos dependencias. `vaadin-dev` recarga componentes Vaadin en caliente sin reiniciar el servidor. `spring-boot-docker-compose` hace algo más interesante: al arrancar la app en modo dev, Spring Boot detecta el `compose.yml` y levanta los servicios de Docker por ti; al detenerla, los apaga. No vuelves a correr `docker compose up` a mano durante el desarrollo.
 
 ## Paso 2: Crear el archivo Docker Compose
 
-Gracias a `spring-boot-docker-compose`, Spring Boot busca por convención un archivo llamado `compose.yml` en el directorio raíz del proyecto. Créalo así:
+Spring Boot busca por defecto un archivo llamado `compose.yml` en la raíz del proyecto. Créalo así:
 
 ```yaml
 name: 'vaadin_flow'
@@ -197,13 +193,13 @@ Usamos `postgres:17-alpine`, imagen ligera de PostgreSQL 17 basada en Alpine. El
 
 ## Paso 3: Arrancar la aplicación
 
-Con `spring-boot-docker-compose` en el classpath y el archivo `compose.yml` en la raíz, **no necesitas levantar Docker manualmente**. Al ejecutar la aplicación desde tu IDE o con:
+Con el `compose.yml` en la raíz y `spring-boot-docker-compose` en el classpath, no necesitas levantar Docker a mano. Al correr la app desde el IDE o con:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Spring Boot detecta `compose.yml`, ejecuta `docker compose up` internamente, espera a que el healthcheck de `customer-db` pase y solo entonces arranca el contexto de la aplicación. Al detener la app, ejecuta `docker compose stop` solo. Esto elimina el paso manual de gestionar el ciclo de vida del contenedor durante el desarrollo.
+Spring Boot corre `docker compose up` internamente, espera a que el healthcheck de `customer-db` pase y solo entonces arranca el contexto. Al detener la app, para los contenedores solo.
 
 ## Paso 4: Configurar `application.properties`
 
@@ -220,11 +216,11 @@ spring.jpa.open-in-view=false
 
 ### Paso 4.1: Migraciones con Flyway
 
-Flyway mantiene un historial de cambios en el esquema. Desde Flyway 10, el soporte para cada base de datos se distribuye en módulos separados. Por eso el `pom.xml` incluye dos artefactos: `spring-boot-starter-flyway` para la integración con Spring Boot y `flyway-database-postgresql` para el driver específico de PostgreSQL. Sin el segundo, Flyway no sabe cómo conectarse a Postgres y la aplicación falla al arrancar.
+Desde Flyway 10 el soporte por base de datos está en módulos separados. Por eso el `pom.xml` tiene dos artefactos: `spring-boot-starter-flyway` para la integración con Spring Boot y `flyway-database-postgresql` para el conector de Postgres. Sin este segundo, la app no arranca.
 
-Dos archivos de migración son suficientes para arrancar.
+Dos scripts de migración son suficientes.
 
-**`V1__create_customers_table.sql`** — define la estructura de la tabla:
+`V1__create_customers_table.sql` define la estructura de la tabla:
 
 ```sql
 CREATE TABLE customers (
@@ -240,7 +236,7 @@ CREATE TABLE customers (
 );
 ```
 
-**`V2__add_customers_data.sql`** — agrega datos iniciales para probar:
+`V2__add_customers_data.sql` inserta dos registros de prueba:
 
 ```sql
 INSERT INTO customers (name, email, phone, address, city, state, zip, country) VALUES
@@ -286,7 +282,7 @@ public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> 
 
 ## Paso 7: Crear el servicio
 
-El servicio maneja las cuatro operaciones del CRUD y convierte entre la entidad y el DTO usando un mapper. A continuación, cada método por separado.
+El servicio tiene cuatro métodos, uno por operación. Cada uno convierte entre entidad y DTO a través del mapper.
 
 **findAll():**
 
@@ -360,7 +356,7 @@ public class Customer {
 
 ### Mapper CustomerMapper
 
-El mapper convierte entre `CustomerEntity` y `Customer`. Tres métodos cubren los casos necesarios:
+El mapper convierte en ambas direcciones entre `CustomerEntity` y `Customer`:
 
 ```java
 public class CustomerMapper {
@@ -444,24 +440,22 @@ public MainCrudView(@Autowired CustomerService customerService) {
 
 `setUseBeanValidation(true)` activa las validaciones de `@NotNull`, `@Email`, etc. directamente en el formulario. `setColumnReorderingAllowed(true)` deja que el usuario reordene columnas arrastrándolas.
 
-Con esto la aplicación ya muestra y gestiona la lista de clientes como se ve en la Figura 1.
+La aplicación ya muestra y gestiona la lista de clientes como se ve en la Figura 1.
 
 <!-- Figura 1: Vista principal de la aplicación -->
 ![Figura #1: Vista principal de la aplicación](/img/blog/crud-vaadin/1.png)
 
 ## Búsqueda por nombre
 
-Agregar filtrado por nombre toma cuatro pasos.
+Para agregar filtrado por nombre necesitas cuatro cambios.
 
-**1. Método en el repositorio:**
+Primero, un método en el repositorio. Spring Data JPA genera la query a partir del nombre del método:
 
 ```java
 List<CustomerEntity> findByNameContainingIgnoreCase(String name);
 ```
 
-Spring Data JPA genera la query automáticamente a partir del nombre del método.
-
-**2. Campo de búsqueda en la vista:**
+Después, el campo de búsqueda en la vista. `ValueChangeMode.EAGER` dispara el evento en cada pulsación de tecla:
 
 ```java
 TextField filter = new TextField();
@@ -471,9 +465,7 @@ filter.setValueChangeMode(ValueChangeMode.EAGER);
 crud.getCrudLayout().addFilterComponent(filter);
 ```
 
-`ValueChangeMode.EAGER` dispara el evento en cada pulsación de tecla, lo que hace que la búsqueda responda de inmediato.
-
-**3. Lógica de filtrado en las operaciones:**
+Luego ajustar las operaciones para que el filtro funcione. Si el campo está vacío devuelve todo; si no, filtra:
 
 ```java
 crud.setOperations(
@@ -491,13 +483,13 @@ crud.setOperations(
 );
 ```
 
-**4. Listener para refrescar el grid:**
+Y un listener para que el grid se actualice cuando cambia el campo:
 
 ```java
 filter.addValueChangeListener(e -> crud.refreshGrid());
 ```
 
-El resultado es una búsqueda en tiempo real: la tabla se actualiza con cada letra que escribe el usuario, como se muestra en la Figura 2.
+La tabla se actualiza con cada letra que escribe el usuario, como se ve en la Figura 2.
 
 ![Figura #2: Vista de la aplicación con búsqueda activa](/img/blog/crud-vaadin/2.png)
 
@@ -507,7 +499,7 @@ Puedes encontrar el código completo en el repositorio: [crud-vaadin-flow](https
 
 ## Conclusión
 
-Este post mostró cómo construir un CRUD funcional con Vaadin Flow 25.0.7, Spring Boot 4.0.1 y PostgreSQL 17. La integración `spring-boot-docker-compose` elimina la fricción de gestionar contenedores a mano durante el desarrollo: arrancas la app y el stack de base de datos sube con ella. Flyway con sus dos módulos para PostgreSQL mantiene el esquema versionado. crudui 7.2.0 reduce la UI a pocas líneas de Java, y el filtrado por nombre agrega usabilidad sin añadir complejidad. El resultado es una base limpia y lista para extender.
+Con Spring Boot 4.0.1, Vaadin 25.0.7 y PostgreSQL 17 tienes una base funcional. `spring-boot-docker-compose` elimina el paso de arrancar infraestructura a mano. Flyway versiona el esquema sin intervención. crudui 7.2.0 reduce la UI a pocas líneas de Java. Lo que ves corriendo aquí ya es una aplicación real, no un prototipo.
 
 ---
 
