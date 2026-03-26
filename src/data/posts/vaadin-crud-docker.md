@@ -2,7 +2,7 @@
 #preview
 title: 'CRUD con Vaadin Flow 25: Despliegue con Docker Compose y PostgreSQL'
 date: '2026-03-25'
-image: "/img/blog/1.png"
+image: "/img/blog/10.png"
 categories:
     - Backend
     - Java
