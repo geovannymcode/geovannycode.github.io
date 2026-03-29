@@ -61,7 +61,7 @@ const ProjectsMasonry = ({ projects, categories, layout = 'masonry', columns = 2
                         {/* title frame */}
                         <div className="art-title-frame">
                             {/* title */}
-                            <h4>Works</h4>
+                            <h4>Portafolio</h4>
                         </div>
                         {/* title frame end */}
                         {/* right frame */}
@@ -69,7 +69,7 @@ const ProjectsMasonry = ({ projects, categories, layout = 'masonry', columns = 2
                             {/* filter */}
                             <div className="art-filter">
                                 {/* filter link */}
-                                <a href="#" data-filter="*" onClick={ (e) => handleFilterKeyChange("*", e)} className="art-link art-current">All Categories</a>
+                                <a href="#" data-filter="*" onClick={ (e) => handleFilterKeyChange("*", e)} className="art-link art-current">Todo</a>
                                 {/* filter link */}
                                 {categories.map((item, key) => (
                                 <a href="#" key={`projects-filter-item-${key}`} data-filter={`${item.slug}`} className="art-link" onClick={(e) => handleFilterKeyChange(item.slug, e)}>{item.name}</a>
@@ -100,7 +100,7 @@ const ProjectsMasonry = ({ projects, categories, layout = 'masonry', columns = 2
                             {/* title */}
                             <h5 className="mb-15">{item.title}</h5>
                             {/* button */}
-                            <Link href={`/projects/${item.id}`} className="art-link art-color-link art-w-chevron">Read more</Link>
+                            <Link href={`/projects/${item.id}`} className="art-link art-color-link art-w-chevron">Ver más</Link>
                         </div>
                         {/* description end */}
                     </div>

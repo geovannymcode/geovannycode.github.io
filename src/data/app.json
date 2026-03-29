@@ -119,20 +119,16 @@
   "projects": {
     "categories": [
       {
-        "name": "Web Templates",
+        "name": "FrontEnd",
         "slug": "web-templates"
       },
       {
-        "name": "UI Elements",
+        "name": "BackEnd",
         "slug": "ui-elements"
       },
       {
-        "name": "Logos",
+        "name": "Móvil",
         "slug": "logos"
-      },
-      {
-        "name": "Drawings",
-        "slug": "drawings"
       }
     ]
   }
