@@ -85,15 +85,17 @@ const InfoBarModule = () => {
 
                     {/* language skills */}
                     <div className="art-lang-skills p-30-15">
-
-                        {AppData.profile.skills.language.map((item, key) => (
-                        <div className="art-lang-skills-item" key={`profile-skills-lang-item-${key}`}>
-                            <div id={`circleprog${key+1}`} className="art-cirkle-progress" data-value={item.value} />
-                            {/* title */}
-                            <h6>{item.label}</h6>
+                        <div className="art-skill-badges">
+                            {AppData.profile.skills.language.map((item, key) => (
+                            <span 
+                                key={`profile-skills-lang-item-${key}`} 
+                                className={`art-badge art-badge-${item.level}`}
+                                title={item.level === 'nat' ? 'Nativo' : item.level === 'con' ? 'Conversacional' : 'Intermedio'}
+                            >
+                                {item.label}
+                            </span>
+                            ))}
                         </div>
-                        ))}
-
                     </div>
                     {/* language skills end */}
 
@@ -102,22 +104,17 @@ const InfoBarModule = () => {
 
                     {/* hard skills */}
                     <div className="art-hard-skills p-30-15">
-                        
-                        {AppData.profile.skills.hard.map((item, key) => (
-                        <div className="art-hard-skills-item" key={`profile-skills-hard-item-${key}`}>
-                            <div className="art-skill-heading">
-                                {/* title */}
-                                <h6>{item.label}</h6>
-                            </div>
-                            {/* progressbar frame */}
-                            <div className="art-line-progress">
-                                {/* progressbar */}
-                                <div id={`lineprog${key+1}`} className="art-line-progress-item" data-value={item.value} />
-                            </div>
-                            {/* progressbar frame end */}
+                        <div className="art-skill-badges">
+                            {AppData.profile.skills.hard.map((item, key) => (
+                            <span 
+                                key={`profile-skills-hard-item-${key}`} 
+                                className={`art-badge art-badge-${item.level}`}
+                                title={item.level === 'exp' ? 'Experto' : item.level === 'adv' ? 'Avanzado' : 'Intermedio'}
+                            >
+                                {item.label}
+                            </span>
+                            ))}
                         </div>
-                        ))}
-
                     </div>
                     {/* language skills end */}
 
@@ -125,11 +122,18 @@ const InfoBarModule = () => {
                     <div className="art-ls-divider"></div>
 
                     {/* knowledge list */}
-                    <ul className="art-knowledge-list p-15-0">
+                    <div className="art-knowledge-section p-15-0">
                         {AppData.profile.skills.knowledge.map((item, key) => (
-                        <li key={`profile-skills-knowledge-item-${key}`}>{item.label}</li>
+                        <div className="art-knowledge-group" key={`profile-skills-knowledge-item-${key}`}>
+                            <span className="art-knowledge-category">{item.category}</span>
+                            <div className="art-knowledge-chips">
+                                {item.items.map((subItem, subKey) => (
+                                <span key={`knowledge-chip-${key}-${subKey}`} className="art-chip">{subItem}</span>
+                                ))}
+                            </div>
+                        </div>
                         ))}
-                    </ul>
+                    </div>
                     {/* knowledge list end */}
 
                     {/* divider */}

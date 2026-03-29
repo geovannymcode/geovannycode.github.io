@@ -280,6 +280,102 @@ info bar
       }
     }
   }
+  /* ----- skill badges ----- */
+  & .art-skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    & .art-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: $tr-sm;
+      cursor: default;
+
+      &-exp {
+        background: rgba($main-color, 0.15);
+        color: $main-color;
+        border: 1px solid rgba($main-color, 0.3);
+      }
+
+      &-adv {
+        background: rgba($text-color-1, 0.1);
+        color: $text-color-1;
+        border: 1px solid rgba($text-color-1, 0.2);
+      }
+
+      &-int {
+        background: rgba($text-color-2, 0.1);
+        color: $text-color-2;
+        border: 1px solid rgba($text-color-2, 0.2);
+      }
+
+      &-nat {
+        background: rgba($main-color, 0.25);
+        color: $main-color;
+        border: 1px solid $main-color;
+        font-weight: 600;
+      }
+
+      &-con {
+        background: rgba($text-color-1, 0.15);
+        color: $text-color-1;
+        border: 1px solid rgba($text-color-1, 0.3);
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+  /* ----- knowledge chips ----- */
+  & .art-knowledge-section {
+    & .art-knowledge-group {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & .art-knowledge-category {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $main-color;
+        margin-bottom: 6px;
+        opacity: 0.8;
+      }
+
+      & .art-knowledge-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        & .art-chip {
+          display: inline-block;
+          padding: 3px 8px;
+          background: $deep-color;
+          color: $text-color-2;
+          font-size: 10px;
+          border-radius: 4px;
+          transition: $tr-sm;
+
+          &:hover {
+            background: rgba($main-color, 0.2);
+            color: $text-color-1;
+          }
+        }
+      }
+    }
+  }
   /* ----- info bar links ----- */
   & .art-links-frame {
     display: flex;
