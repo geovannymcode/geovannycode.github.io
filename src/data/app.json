@@ -25,49 +25,32 @@
     ],
     "skills": {
       "language": [
-        {
-          "label": "Español",
-          "value": "1"
-        },
-        {
-          "label": "English",
-          "value": "0.5"
-        },
-        {
-          "label": "Portugués",
-          "value": "0.6"
-        }
+        { "label": "Español", "level": "nat" },
+        { "label": "English", "level": "con" },
+        { "label": "Portugués", "level": "int" }
       ],
       "hard": [
-        { "label": "Java / Kotlin", "value": "0.84" },
-        { "label": "Spring Boot / Spring Cloud", "value": "0.83" },
-        {
-          "label": "AWS (Lambda, SQS, SNS, API Gateway, Cognito)",
-          "value": "0.73"
-        },
-        { "label": "Kafka / Redis", "value": "0.80" },
-        { "label": "PostgreSQL / DynamoDB", "value": "0.80" },
-        { "label": "React / Next.js / NestJS", "value": "0.74" },
-        { "label": "Golang / Vaadin", "value": "0.75" },
-        {
-          "label": "Docker / CI-CD (Jenkins, ArgoCD, GitLab CI)",
-          "value": "0.70"
-        }
+        { "label": "Java", "level": "exp" },
+        { "label": "Kotlin", "level": "exp" },
+        { "label": "Spring Boot", "level": "exp" },
+        { "label": "Spring Cloud", "level": "adv" },
+        { "label": "AWS", "level": "adv" },
+        { "label": "Kafka", "level": "adv" },
+        { "label": "PostgreSQL", "level": "exp" },
+        { "label": "Docker", "level": "exp" },
+        { "label": "React / Next.js", "level": "adv" },
+        { "label": "CI/CD", "level": "adv" },
+        { "label": "Redis", "level": "adv" },
+        { "label": "Golang", "level": "int" }
       ],
       "knowledge": [
-        { "label": "Arquitectura: Hexagonal, Clean, DDD, CQRS, EDA" },
-        {
-          "label": "Patrones: Saga, Outbox, Circuit Breaker, Retry, Idempotencia"
-        },
-        {
-          "label": "Observabilidad: Mezmo, ELK, Prometheus, Grafana, OpenTelemetry"
-        },
-        { "label": "Seguridad y Autenticación: OAuth2, JWT" },
-        { "label": "Integraciones: REST, GraphQL" },
-        { "label": "Gestión de Datos: JPA/Hibernate, Flyway" },
-        {
-          "label": "Infraestructura: Elastic Beanstalk, Contenerización y CI/CD"
-        }
+        { "category": "Arquitectura", "items": ["Hexagonal", "Clean", "DDD", "CQRS", "EDA"] },
+        { "category": "Patrones", "items": ["Saga", "Outbox", "Circuit Breaker", "Retry", "Idempotencia"] },
+        { "category": "Observabilidad", "items": ["ELK", "Prometheus", "Grafana", "OpenTelemetry"] },
+        { "category": "Seguridad", "items": ["OAuth2", "JWT", "API Security"] },
+        { "category": "Integraciones", "items": ["REST", "GraphQL", "gRPC", "WebSocket"] },
+        { "category": "Datos", "items": ["JPA", "Hibernate", "Flyway", "Migraciones"] },
+        { "category": "Infraestructura", "items": ["Docker", "Kubernetes", "CI/CD", "Cloud"] }
       ]
     },
     "resume": "/files/Geovanny_Mendoza_CV.pdf"
@@ -76,17 +59,17 @@
     "topBackground": "/img/bg.png",
     "menu": [
       {
-        "label": "Home",
+        "label": "Acerca",
         "link": "/",
         "children": 0
       },
       {
-        "label": "History",
+        "label": "Historia",
         "link": "/history",
         "children": 0
       },
       {
-        "label": "Projects",
+        "label": "Portafolio",
         "link": "/projects",
         "children": []
       },
@@ -96,12 +79,12 @@
         "children": []
       },
       {
-        "label": "Contact",
+        "label": "Contacto",
         "link": "/contact",
         "children": 0
       },
       {
-        "label": "Other",
+        "label": "Resumen",
         "link": "/onepage",
         "children": []
       }
