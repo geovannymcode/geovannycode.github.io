@@ -1,53 +1,66 @@
 ---
 #preview
-title: Confidential Technology
-image: /img/works/thumbnail/7.jpg
+title: EcoEats - Delivery Ecológico
+image: /img/works/thumbnail/13.png
 category: Móvil
 category_slug: logos
+date: may 24 2023
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: horizontal
 
 #full details
 description:
-  title: Description
+  title: Descripción
   content: "
-      <p>Perferendis modi tempora, minus facere! Animi ipsam explicabo beatae soluta qui repellat minus perspiciatis placeat doloribus praesentium laborum debitis error sed ex nisi, ipsum ad obcaecati assumenda ut recusandae. Vero, voluptate, magni unde accusantium vel ducimus expedita!</p>
+      <p>Aplicación móvil de delivery de comida con enfoque ecológico y sostenible. EcoEats conecta restaurantes locales con clientes conscientes del medio ambiente, ofreciendo opciones de embalajes biodegradables, rutas optimizadas para reducir emisiones y un sistema de recompensas por elecciones verdes. Desarrollada para promover hábitos alimenticios responsables.</p>
   "
   button:
-    label: Read More
-    link: https://www.behance.net/gallery/83236527/VIE
+    label: Ver más
+    link: /contact
 
 details:
-  title: Project details
+  title: Detalles del Proyecto
   items:
-    - label: Order Date
-      value: 24.01.2024
+    - label: Fecha Inicio
+      value: 10.03.2024
 
-    - label: Final Date
-      value: 12.02.2024
+    - label: Fecha Final
+      value: 25.05.2024
 
-    - label: Status
-      value: Completed
+    - label: Estado
+      value: Completado
 
-    - label: Client
-      value: Envato Market
+    - label: Cliente
+      value: Proyecto Personal
 
-    - label: Location
-      value: Ukraine, Lviv
+    - label: Ubicación
+      value: Barranquilla, Colombia
 
-carousel:
-  - image: /img/works/thumbnail/1.jpg
+gallery:
+  title: Resultado
+  items:
+  - image: /img/works/thumbnail/13.png
+    masonrySize: horizontal
     alt: image
 
-  - image: /img/works/thumbnail/7.jpg
+  - image: /img/works/thumbnail/14.png
+    masonrySize: vertical
     alt: image
 
-  - image: /img/works/thumbnail/4.jpg
+  - image: /img/works/thumbnail/15.png
+    masonrySize: vertical    
     alt: image
 
-  - image: /img/works/thumbnail/5.jpg
+  - image: /img/works/thumbnail/16.png
+    masonrySize: vertical    
     alt: image
 
-  - image: /img/works/thumbnail/3.jpg
+  - image: /img/works/thumbnail/17.png
+    masonrySize: vertical    
     alt: image
+
+  - image: /img/works/thumbnail/18.png
+    masonrySize: vertical
+    alt: image
+
 ---
