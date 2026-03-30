@@ -2,7 +2,7 @@
 #preview
 title: Confidential Technology
 image: /img/works/thumbnail/7.jpg
-category: Logos
+category: Móvil
 category_slug: logos
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: horizontal

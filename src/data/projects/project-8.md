@@ -2,7 +2,7 @@
 #preview
 title: Dental Clinic
 image: /img/works/thumbnail/8.jpg
-category: Drawings
+category: FrontEnd
 category_slug: drawings
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: horizontal

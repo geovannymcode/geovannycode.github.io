@@ -1,54 +1,63 @@
 ---
 #preview
-title: Interior design studio
-image: /img/works/thumbnail/1.jpg
-category: Web Templates
+title: BookStore - Librería Online
+image: /img/works/thumbnail/4.png
+category: FrontEnd
 category_slug: web-templates
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: horizontal
 
 #full details
 description:
-  title: Description
+  title: Descripción
   content: "
-      <p>Perferendis modi tempora, minus facere! Animi ipsam explicabo beatae soluta qui repellat minus perspiciatis placeat doloribus praesentium laborum debitis error sed ex nisi, ipsum ad obcaecati assumenda ut recusandae. Vero, voluptate, magni unde accusantium vel ducimus expedita!</p>
+      <p>Sistema de librería online completo desarrollado con tecnologías web modernas. Incluye catálogo de libros, carrito de compras, proceso de checkout en múltiples pasos (información del cliente, dirección de entrega, método de pago), paginación de productos y gestión de órdenes. Diseño intuitivo y experiencia de usuario fluida para la compra de libros desde la estantería hasta la puerta del cliente.</p>
   "
   button:
-    label: Read More
-    link: https://www.behance.net/gallery/83236527/VIE
+    label: Ver más
+    link: /contact
 
 details:
-  title: Project details
+  title: Detalles del Proyecto
   items:
-    - label: Order Date
-      value: 24.01.2024
+    - label: Fecha Inicio
+      value: 15.01.2024
 
-    - label: Final Date
-      value: 12.02.2024
+    - label: Fecha Final
+      value: 28.02.2024
 
-    - label: Status
-      value: Completed
+    - label: Estado
+      value: Completado
 
-    - label: Client
-      value: Envato Market
+    - label: Cliente
+      value: Proyecto Personal
 
-    - label: Location
-      value: Ukraine, Lviv
+    - label: Ubicación
+      value: Barranquilla, Colombia
 
 carousel:
-  - image: /img/works/thumbnail/1.jpg
+
+  - image: /img/works/thumbnail/5.png
     alt: image
 
-  - image: /img/works/thumbnail/7.jpg
+  - image: /img/works/thumbnail/6.png
     alt: image
 
-  - image: /img/works/thumbnail/4.jpg
+  - image: /img/works/thumbnail/7.png
     alt: image
 
-  - image: /img/works/thumbnail/5.jpg
+  - image: /img/works/thumbnail/8.png
+    alt: image
+    
+  - image: /img/works/thumbnail/9.png
+    alt: image
+      
+  - image: /img/works/thumbnail/10.png
+    alt: image
+      
+  - image: /img/works/thumbnail/11.png
     alt: image
 
-  - image: /img/works/thumbnail/3.jpg
+  - image: /img/works/thumbnail/12.png
     alt: image
-
 ---

@@ -2,7 +2,7 @@
 #preview
 title: Smart House by Molekule
 image: /img/works/thumbnail/5.jpg
-category: UI Elements
+category: BackEnd
 category_slug: ui-elements
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: square
@@ -36,7 +36,7 @@ details:
       value: Ukraine, Lviv
 
 carousel:
-  - image: /img/works/thumbnail/1.jpg
+  - image: /img/works/thumbnail/1.png
     alt: image
 
   - image: /img/works/thumbnail/7.jpg

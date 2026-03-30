@@ -2,7 +2,7 @@
 #preview
 title: Cascade of Lava
 image: /img/works/thumbnail/4.jpg
-category: UI Elements
+category: BackEnd
 category_slug: ui-elements
 date: may 24 2023
 #portfolio image size for masonry layout: horizontal, vertical, square

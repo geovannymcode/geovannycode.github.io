@@ -1,53 +1,53 @@
 ---
 #preview
-title: Tony's Chocolonely
-image: /img/works/thumbnail/6.jpg
-category: Logos
+title: Billetera Digital
+image: /img/works/thumbnail/1.png
+category: Móvil
 category_slug: logos
 date: may 24 2023
 #portfolio image size for masonry layout: horizontal, vertical, square
-masonrySize: vertical
+masonrySize: horizontal
 
 #full details
 description:
-    title: Description
+    title: Descripción
     content: "
-      <p>Perferendis modi tempora, minus facere! Animi ipsam explicabo beatae soluta qui repellat minus perspiciatis placeat doloribus praesentium laborum debitis error sed ex nisi, ipsum ad obcaecati assumenda ut recusandae. Vero, voluptate, magni unde accusantium vel ducimus expedita!</p>
+      <p>Aplicación móvil de billetera digital desarrollada con Flutter. Permite gestionar pagos, transferencias y visualizar el historial de transacciones en tiempo real. Diseño moderno y seguro para el manejo de finanzas personales.</p>
     "
     button:
-      label: Read More
-      link: https://www.behance.net/gallery/83236527/VIE
+      label: Ver más
+      link: /contact
 
 details:
-  title: Info Project
+  title: Info Proyecto
   items:
-    - label: Order Date
+    - label: Fecha Inicio
       value: 24.01.2024
 
-    - label: Final Date
-      value: 12.02.2024
+    - label: Fecha Final
+      value: En progreso
 
-    - label: Status
-      value: Completed
+    - label: Estado
+      value: En desarrollo
 
-    - label: Client
-      value: Envato Market
+    - label: Cliente
+      value: Proyecto Personal
 
-    - label: Location
-      value: Ukraine, Lviv
+    - label: Ubicación
+      value: Barranquilla, Colombia
 
 gallery:
-  title: Result
+  title: Resultado
   items:
-  - image: /img/works/thumbnail/1.jpg
+  - image: /img/works/thumbnail/1.png
     masonrySize: horizontal
     alt: image
 
-  - image: /img/works/thumbnail/2.jpg
-    masonrySize: vertical
+  - image: /img/works/thumbnail/2.png
+    masonrySize: horizontal
     alt: image
 
-  - image: /img/works/thumbnail/3.jpg
+  - image: /img/works/thumbnail/3.png
     masonrySize: horizontal
     alt: image
 ---

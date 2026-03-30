@@ -2,7 +2,7 @@
 #preview
 title: City House
 image: /img/works/thumbnail/2.jpg
-category: Web Templates
+category: FrontEnd
 category_slug: web-templates
 #portfolio image size for masonry layout: horizontal, vertical, square
 masonrySize: vertical
