@@ -1,7 +1,7 @@
 ---
 #preview
 title: 'Apache Kafka con Spring Boot y Kotlin: Arquitectura Orientada a Eventos'
-date: '2026-03-25'
+date: '2026-03-29'
 image: "/img/blog/11.png"
 categories:
     - Backend
@@ -102,7 +102,7 @@ Creamos el proyecto desde [Spring Initializr](https://start.spring.io/) con esto
 
 La estructura del proyecto sigue una organización por paquetes:
 
-```
+```mermaid
 src/main/kotlin/com/geovannycode/
 ├── KotlinKafkaApplication.kt
 │
