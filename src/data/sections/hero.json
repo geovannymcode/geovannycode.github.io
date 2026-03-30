@@ -1,19 +1,19 @@
 {
     "bg_image": "/img/bg.png",
-    "title": "Bienvenido a Mi<br/>Espacio Artístico</br>en la web",
+    "title": "Construyendo Software<br/>Escalable, Resiliente<br/>y de Alto Rendimiento",
     "subtitle": {
   "start": "&lt;<i>code</i>&gt; ",
   "rotates": [
-    "Microservicios y APIs (Kotlin/Spring Boot, NestJS).",
-    "Frontend con React y Next.js.",
-    "Arquitectura limpia: Hexagonal, DDD y pruebas.",
-    "DevOps en AWS: Docker, CI/CD y observabilidad."
+    "Microservicios y APIs (Java, Kotlin, NestJS, Golang).",
+    "Desarrollo Full Stack con Vaadin, React y Next.js.",
+    "Arquitectura Cloud-Native: Hexagonal, Clean y DDD.",
+    "Mensajería y DevOps: Kafka, Docker, AWS y CI/CD."
   ],
   "end": "&lt;/<i>code</i>&gt;"
 },
     "button": {
         "link": "/projects",
-        "label": "Explora Ahora"
+        "label": "Ver Portafolio"
     },
     "photo": {
         "url": "/img/face-2.png",

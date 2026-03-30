@@ -3,7 +3,7 @@
   "items": [
     {
       "title": "Desarrollo de Microservicios y APIs",
-      "text": "Diseño y desarrollo de microservicios escalables y resilientes usando Kotlin, Spring Boot y NestJS. Implementación de arquitecturas event-driven, comunicación asíncrona con Kafka y Redis, y despliegue en AWS (Lambda, SQS, SNS, API Gateway, Cognito).",
+      "text": "Diseño y desarrollo de microservicios escalables y de alto rendimiento usando Java, Kotlin, Golang y frameworks como Spring Boot o Quarkus. Implementación de arquitecturas event-driven con Kafka, integración de IA (Spring AI) y despliegue cloud-native en AWS.",
       "button": {
         "link": "/contact",
         "label": "Contáctame"
@@ -11,23 +11,23 @@
     },
     {
       "title": "Arquitectura y Consultoría Técnica",
-      "text": "Asesoría en modernización tecnológica, migraciones a arquitecturas cloud-native y diseño de sistemas basados en principios SOLID, DDD, Hexagonal y CQRS. Evaluación de resiliencia, observabilidad y optimización de costos en infraestructura AWS.",
+      "text": "Asesoría en modernización tecnológica, migraciones a la nube y diseño de sistemas basados en principios SOLID, DDD, Hexagonal y CQRS. Evaluación de resiliencia, observabilidad y optimización de costos en tu infraestructura.",
       "button": {
         "link": "/contact",
         "label": "Contáctame"
       }
     },
     {
-      "title": "Desarrollo Full Stack",
-      "text": "Creación de aplicaciones web completas con Kotlin/Spring Boot en el backend y React o Next.js en el frontend. Integración de APIs seguras con OAuth2/JWT, paneles administrativos y dashboards para automatización y analítica.",
+      "title": "Desarrollo Full Stack y UI Empresarial",
+      "text": "Creación de plataformas web completas. Desde integraciones con React y Next.js, hasta interfaces productivas impulsadas 100% desde el backend utilizando Vaadin con Java/Kotlin (sin necesidad de escribir JavaScript), garantizando seguridad y rapidez en el desarrollo.",
       "button": {
         "link": "/contact",
         "label": "Contáctame"
       }
     },
     {
-      "title": "Capacitación y Mentoría",
-      "text": "Talleres y programas de formación en Java, Kotlin, Spring, arquitectura de software y buenas prácticas de desarrollo. Experiencia docente en la Universidad de Antioquia y mentor del proyecto Misión TIC. Formación adaptada a equipos técnicos y comunidades.",
+      "title": "Capacitación, Conferencias y Mentoría",
+      "text": "Formación adaptada a equipos técnicos en Java, Kotlin, arquitectura y buenas prácticas. Aporto mi experiencia como docente universitario, líder de comunidades tecnológicas (JUG) y speaker en conferencias internacionales para elevar el nivel de tu equipo de ingeniería.",
       "button": {
         "link": "/contact",
         "label": "Contáctame"
@@ -35,7 +35,7 @@
     },
     {
       "title": "Consultoría Independiente 100% Remota",
-      "text": "Ofrezco servicios de consultoría técnica y acompañamiento a empresas y startups en Latinoamérica. Más de 12 años de experiencia ayudando a equipos a escalar sus productos, reducir incidentes y mejorar la calidad del código desde la arquitectura.",
+      "text": "Como Ingeniero de Software Independiente, ofrezco acompañamiento estratégico a empresas y startups en Latinoamérica. Te ayudo a escalar tus productos, reducir la deuda técnica y establecer estándares de calidad desde el diseño de la arquitectura.",
       "button": {
         "link": "/contact",
         "label": "Contáctame"
