@@ -140,6 +140,77 @@ content
     }
   }
 }
+
+/* ----- service cards ----- */
+.art-service-card {
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: $shadow-1;
+  background: $card-color;
+  transition: $tr-md;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  & .art-service-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $tr-md;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  & .art-service-card-content {
+    padding: 25px;
+
+    & .art-service-card-title {
+      color: $main-color;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    & .art-service-card-text {
+      color: $text-color-2;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    & .art-service-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      & .art-service-tag {
+        display: inline-block;
+        padding: 5px 14px;
+        background: rgba($text-color-2, 0.15);
+        color: $text-color-2;
+        font-size: 12px;
+        border-radius: 20px;
+        transition: $tr-sm;
+
+        &:hover {
+          background: rgba($main-color, 0.2);
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
 /* ----- prices ----- */
 .art-price {
   margin-bottom: 30px;

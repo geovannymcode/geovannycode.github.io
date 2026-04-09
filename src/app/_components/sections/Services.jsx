@@ -1,5 +1,4 @@
 import Data from "@data/sections/services.json";
-import Link from "next/link";
 
 const ServicesSection = () => {
   return (
@@ -30,22 +29,28 @@ const ServicesSection = () => {
             {Data.items.map((item, key) => (
             <div className="col-lg-4 col-md-6" key={`services-item-${key}`}>
 
-            {/* service */}
-            <div className="art-a art-service-icon-box">
+            {/* service card */}
+            <div className="art-a art-service-card">
+                {/* service image */}
+                <div className="art-service-card-image">
+                    <img src={item.image} alt={item.title} />
+                </div>
                 {/* service content */}
-                <div className="art-service-ib-content">
+                <div className="art-service-card-content">
                     {/* title */}
-                    <h5 className="mb-15">{item.title}</h5>
+                    <h5 className="art-service-card-title">{item.title}</h5>
                     {/* text */}
-                    <div className="mb-15">{item.text}</div>
-                    {/* button */}
-                    <div className="art-buttons-frame">
-                        <Link href={item.button.link} className="art-link art-color-link art-w-chevron">{item.button.label}</Link>
+                    <p className="art-service-card-text">{item.text}</p>
+                    {/* tags */}
+                    <div className="art-service-card-tags">
+                        {item.tags.map((tag, tagKey) => (
+                        <span className="art-service-tag" key={`service-tag-${key}-${tagKey}`}>{tag}</span>
+                        ))}
                     </div>
                 </div>
                 {/* service content end */}
             </div>
-            {/* service end */}
+            {/* service card end */}
 
             </div>
             ))}

@@ -1,45 +1,23 @@
 {
-  "title": "Mis Servicios",
+  "title": "Servicios & Experiencia",
   "items": [
     {
-      "title": "Desarrollo de Microservicios y APIs",
-      "text": "Diseño y desarrollo de microservicios escalables y de alto rendimiento usando Java, Kotlin, Golang y frameworks como Spring Boot o Quarkus. Implementación de arquitecturas event-driven con Kafka, integración de IA (Spring AI) y despliegue cloud-native en AWS.",
-      "button": {
-        "link": "/contact",
-        "label": "Contáctame"
-      }
+      "title": "Desarrollo Full Stack",
+      "text": "Construcción de aplicaciones full-stack robustas usando Java, Kotlin, Go, NestJS, React, Next.js y Vaadin. Desde APIs de alto rendimiento hasta interfaces empresariales completas.",
+      "image": "/img/services/fullstack.png",
+      "tags": ["Backend", "Frontend", "APIs"]
     },
     {
-      "title": "Arquitectura y Consultoría Técnica",
-      "text": "Asesoría en modernización tecnológica, migraciones a la nube y diseño de sistemas basados en principios SOLID, DDD, Hexagonal y CQRS. Evaluación de resiliencia, observabilidad y optimización de costos en tu infraestructura.",
-      "button": {
-        "link": "/contact",
-        "label": "Contáctame"
-      }
+      "title": "Arquitectura & Diseño",
+      "text": "Diseño y desarrollo de sistemas de alto rendimiento usando Microservicios, Monolitos Modulares, Event-Driven Architecture y despliegue Cloud-Native en AWS.",
+      "image": "/img/services/architecture.png",
+      "tags": ["Microservicios", "Monolitos Modulares", "Event-Driven"]
     },
     {
-      "title": "Desarrollo Full Stack y UI Empresarial",
-      "text": "Creación de plataformas web completas. Desde integraciones con React y Next.js, hasta interfaces productivas impulsadas 100% desde el backend utilizando Vaadin con Java/Kotlin (sin necesidad de escribir JavaScript), garantizando seguridad y rapidez en el desarrollo.",
-      "button": {
-        "link": "/contact",
-        "label": "Contáctame"
-      }
-    },
-    {
-      "title": "Capacitación, Conferencias y Mentoría",
-      "text": "Formación adaptada a equipos técnicos en Java, Kotlin, arquitectura y buenas prácticas. Aporto mi experiencia como docente universitario, líder de comunidades tecnológicas (JUG) y speaker en conferencias internacionales para elevar el nivel de tu equipo de ingeniería.",
-      "button": {
-        "link": "/contact",
-        "label": "Contáctame"
-      }
-    },
-    {
-      "title": "Consultoría Independiente 100% Remota",
-      "text": "Como Ingeniero de Software Independiente, ofrezco acompañamiento estratégico a empresas y startups en Latinoamérica. Te ayudo a escalar tus productos, reducir la deuda técnica y establecer estándares de calidad desde el diseño de la arquitectura.",
-      "button": {
-        "link": "/contact",
-        "label": "Contáctame"
-      }
+      "title": "Mentoría & Coaching",
+      "text": "Coaching personalizado, guía práctica y mentoría basada en experiencia real de la industria. Formación para equipos técnicos y acompañamiento estratégico.",
+      "image": "/img/services/mentoring.png",
+      "tags": ["Coaching", "Capacitación", "Consultoría"]
     }
   ]
 }
