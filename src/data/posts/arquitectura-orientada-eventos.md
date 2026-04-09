@@ -722,9 +722,16 @@ Ve a **File → Settings → Plugins → Marketplace**, busca "Kafkalytic", inst
 5. Presiona "Test Connection" para validar
 6. Haz clic en "OK" para guardar
 
+<!-- Figura 1: New cluster -->
+![Figura #1: Vista de nuevo cluster](/img/blog/arq-evento-kafka/Kafka_1.png)
+
+
 ### Generar mensajes en batch
 
 Expande el cluster en la vista del plugin, ubica el tópico (ej. `geovannycode-topic`), haz clic derecho y selecciona **Message bulk generator**:
+
+<!-- Figura 2: New cluster -->
+![Figura #1: Vista del tópico](/img/blog/arq-evento-kafka/Kafka_2.png)
 
 | Campo | Ejemplo | Descripción |
 |---|---|---|
@@ -735,11 +742,16 @@ Expande el cluster en la vista del plugin, ubica el tópico (ej. `geovannycode-t
 | Random part size | 100 | Longitud de la parte aleatoria |
 | Message template | `Mensaje <random>` | Plantilla; `<random>` se reemplaza con contenido aleatorio |
 
+<!-- Figura 3: vista del panel Kafkalytic con el offset actualizado -->
+![Figura #3: Vista kafka message generator for topic](/img/blog/arq-evento-kafka/Kafka_3.png)
+
+
 ### Validar el offset
 
 Selecciona el tópico en la vista del plugin y revisa la columna **Offset**. Si enviaste 100 mensajes, el valor pasa de 0 a 100. Desde el mismo panel puedes consumir mensajes, ver particiones, ISR y la configuración del tópico.
 
-<!-- Imagen: vista del panel Kafkalytic con el offset actualizado -->
+<!-- Figura 4: vista del panel Kafkalytic con el offset actualizado -->
+![Figura #4: Vista del panel Kafkalytic con el offset actualizado](/img/blog/arq-evento-kafka/Kafka_4.png)
 
 ## Conclusión
 
