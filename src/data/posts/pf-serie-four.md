@@ -1,6 +1,6 @@
 ---
 title: 'Serie: Programación Funcional en Java – Parte 4: Referencia a Métodos y Parallel Streams'
-date: '2026-01-30'
+date: '2026-02-01'
 image: "/img/blog/9.png"
 categories:
     - Backend
